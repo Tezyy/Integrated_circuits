@@ -1,0 +1,64 @@
+[aimspice]
+[description]
+1380
+*Logic gates (V1 untested 19_10)
+
+.include .\gpdk90nm_tt.cir
+
+*________________________________________________
+
+*NOT gate 
+
+.subckt 1inNOT in1 out1 Vdd gnd
+xMp1 Vdd in1 out1 gnd pmos1v L=L1 W=W1
+xMn1 out1 in1 gnd gnd nmos1v L=L1 W=W1
+.ends
+
+*________________________________________________
+
+*NAND gates
+
+.subckt 2inNAND in1 in2 out1 Vdd gnd
+xmp1 Vdd in1 out1 gnd pmos1v L=L1 W=W1
+xmp2 Vdd in2 out1 gnd pmos1v L=L1 W=W1
+
+xmn1 out1 in1 2 gnd nmos1v L=L1 W=W1
+xmn2 2 in2 gnd gnd nmos1v L=L1 W=W1
+.ends
+
+.subckt 3inNAND in1 in2 in3 out1 Vdd gnd
+xmp1 Vdd in1 out1 gnd pmos1v L=L1 W=W1
+xmp2 Vdd in2 out1 gnd pmos1v L=L1 W=W1
+xmp3 Vdd in3 out1 gnd pmos1v L=L1 W=W1
+
+xmn1 out1 in1 2 gnd nmos1v L=L1 W=W1
+xmn2 2 in2 3 gnd nmos1v L=L1 W=W1
+xmn3 3 in3 gnd gnd nmos1v L=L1 W=W1
+.ends
+
+*________________________________________________
+
+*AND gates
+
+.subckt 2inAND in1 in2 out1 Vdd gnd
+xNAND1 in1 in2 temp Vdd gnd 2inNAND
+xNOT1 temp out1 Vdd gnd 1inNOT
+.ends
+
+.subckt 3inAND in1 in2 in3 out1 Vdd gnd
+xNAND1 in1 in2 in3 temp Vdd gnd 3inNAND
+xNOT1 temp out1 Vdd gnd 1inNOT
+.ends
+
+*________________________________________________
+
+*NOR gate
+
+.subckt 2inNOR in1 in2 out1 Vdd gnd
+xmp1 Vdd in1 2 gnd pmos1v L=L1 W=W1
+xmp2 2 in2 out1 gnd pmos1v L=L1 W=W1
+
+xmn1 out1 in1 gnd gnd nmos1v L=L1 W=W1
+xmn2 out1 in2 gnd gnd nmos1v L=L1 W=W1
+.ends
+[end]
