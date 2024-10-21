@@ -1,0 +1,106 @@
+*Mem_cell
+
+*.include logic_gates.cir
+
+*Logic gates (V1 untested 19_10)
+
+.include gpdk90nm_tt.cir
+
+*________________________________________________
+
+*NOT gate 
+
+.subckt 1inNOT in1 out1 Vdd gnd
+xMp1 Vdd in1 out1 gnd pmos1v L=L1 W=W1
+xMn1 out1 in1 gnd gnd nmos1v L=L1 W=W1
+.ends
+
+*________________________________________________
+
+*NAND gates
+
+.subckt 2inNAND in1 in2 out1 Vdd gnd
+xmp1 Vdd in1 out1 gnd pmos1v L=L1 W=W1
+xmp2 Vdd in2 out1 gnd pmos1v L=L1 W=W1
+
+xmn1 out1 in1 2 gnd nmos1v L=L1 W=W1
+xmn2 2 in2 gnd gnd nmos1v L=L1 W=W1
+.ends
+
+.subckt 3inNAND in1 in2 in3 out1 Vdd gnd
+xmp1 Vdd in1 out1 gnd pmos1v L=L1 W=W1
+xmp2 Vdd in2 out1 gnd pmos1v L=L1 W=W1
+xmp3 Vdd in3 out1 gnd pmos1v L=L1 W=W1
+
+xmn1 out1 in1 2 gnd nmos1v L=L1 W=W1
+xmn2 2 in2 3 gnd nmos1v L=L1 W=W1
+xmn3 3 in3 gnd gnd nmos1v L=L1 W=W1
+.ends
+
+*________________________________________________
+
+*AND gates
+
+.subckt 2inAND in1 in2 out1 Vdd gnd
+xNAND1 in1 in2 temp Vdd gnd 2inNAND
+xNOT1 temp out1 Vdd gnd 1inNOT
+.ends
+
+.subckt 3inAND in1 in2 in3 out1 Vdd gnd
+xNAND1 in1 in2 in3 temp Vdd gnd 3inNAND
+xNOT1 temp out1 Vdd gnd 1inNOT
+.ends
+
+*________________________________________________
+
+*NOR gate
+
+.subckt 2inNOR in1 in2 out1 Vdd gnd
+xmp1 Vdd in1 2 gnd pmos1v L=L1 W=W1
+xmp2 2 in2 out1 gnd pmos1v L=L1 W=W1
+
+xmn1 out1 in1 gnd gnd nmos1v L=L1 W=W1
+xmn2 out1 in2 gnd gnd nmos1v L=L1 W=W1
+.ends
+*paramètres
+
+.param Vdd=0.40
+.param L1=100n
+.param W1=300n
+
+
+.subckt SR_latch in1 in2 out1 Vdd gnd
+xNOR1 in1 temp out1 Vdd gnd 2inNOR
+xNOR2 out1 in1 temp Vdd gnd 2inNOr
+.ends
+
+.subckt bitcell select input rw out Vdd gnd
+
+xNAND1 select input rw outNAND1 Vdd gnd 3inNAND
+xNAND2 select not_input rw outNAND2 Vdd gnd 3inNAND
+
+xNOT1 input not_input Vdd gnd 1inNOT
+xNOT2 rw not_rw Vdd gnd 1inNOT
+
+xNAND3 not_rw temp select out_bitcell Vdd gnd 3inNAND
+
+xSRLATCH outNAND1 outNAND2 temp Vdd gnd SR_latch
+
+.ends
+
+*Test signals
+V1 1 0 dc Vdd
+Vinp input 0 PULSE(0 Vdd 20ns 0.1ns 0.1ns 10ns 50ns)
+Vsel select 0 PULSE(0 Vdd 5ns 0.1ns 0.1ns 2.9ns 15ns)
+Vrw rw 0 PULSE(Vdd 0 25ns 0.1ns 0.1ns 23ns 50ns)
+
+*Testing read/write time
+xBitcell input select rw Y 1 0 bitcell
+.plot v(inp) v(sel) v(rw) v(Y)
+.plot i(v1)
+
+*Static bitcell for leakage measurement
+*xBitcell 0 1 1 Y tempY 1 0 SRbitcell
+*.op xBitcell
+
+
