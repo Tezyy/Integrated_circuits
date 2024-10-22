@@ -1,0 +1,29 @@
+timestamp=1729592541594
+
+[~A]
+C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NOR/src/Verilog_XOR.v=0*377*1018
+LastVerilogToplevel=Verilog_XOR
+ModifyID=1
+Version=74
+
+[~MFT]
+0=4|0Bitcell_XOR.mgf|1018|0
+1=2|1Bitcell_XOR.mgf|374|0
+3=4|3Bitcell_XOR.mgf|304|0
+
+[$root]
+A/$root=22|||1*0
+BinW64/$root=3*0
+SLP=3*115
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|c73a565f2ade592f8ac1c68f484c92166de3b3eec2c7ab226f8ba6300b665837
+
+[Verilog_XOR]
+A/Verilog_XOR=22|../src/Verilog_XOR.v|27|1*374
+BinW64/Verilog_XOR=3*183
+R=../src/Verilog_XOR.v|27
+SLP=3*304
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|19d5f70806c513153d321d6b17bfdc280747ed2d175c4688c3b7b0303672700599d3c3515e22cfc3d9a502ed1ddf5f10
+
+[~U]
+$root=12|0*0|
+Verilog_XOR=12|0*166||0x10
