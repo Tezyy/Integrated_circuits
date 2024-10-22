@@ -5,7 +5,7 @@ Bitcell_NOR=Bitcell_NOR.adf
 [Settings]
 Active=Bitcell_NOR
 [Expand]
-bitcell_nor=1
+bitcell_nor=0
 [Browser]
 sort=order
 mode=none

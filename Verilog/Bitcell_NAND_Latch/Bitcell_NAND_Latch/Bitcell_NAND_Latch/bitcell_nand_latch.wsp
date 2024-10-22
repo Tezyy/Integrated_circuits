@@ -1,0 +1,7 @@
+[CACHESIMPLE|Aldec.SymbolsCommands.7]
+Built-in symbols=0
+Bitcell_NAND_Latch=0
+[COMPILESTATUS|.\src\Bitcell_NAND.v]
+FileTimeLow=1135249602
+FileTimeHigh=31138944
+Status=Modified

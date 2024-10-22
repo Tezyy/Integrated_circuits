@@ -17,6 +17,25 @@ FLOWTOOLS=ONLY_IMPL
 ON_SERVERFARM_SYNTH=0
 ON_SERVERFARM_IMPL=0
 ON_SERVERFARM_SIM=0
+AccessACCB=1
+AccessACCR=1
+AccessReadTopLevel=1
+AccessRead=0
+AccessReadWrite=0
+AccessReadWriteSLP=1
+SimulationAccessReadPaths=
+SimulationAccessReadModules=
+SimulationAccessReadWritePaths=
+SimulationAccessReadWriteModules=
+SimulationAccessNetsPaths=
+SimulationAccessNetsModules=+ml +inv +w_nets
+FUNC_LIB=Bitcell_XOR
+PCBINTERFACE_STATUS=ERRORS
+IMPL_TOOL=
+SYNTH_TOOL=
+CSYNTH_TOOL=
+PHYSSYNTH_TOOL=
+FAMILY=
 [IMPLEMENTATION]
 UCF=
 [Files]
