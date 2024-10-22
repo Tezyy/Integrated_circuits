@@ -24,7 +24,7 @@
 //    and may be overwritten
 //{module {Bitcell_NAND}}
 
-module Bitcell_NAND ( in ,sel ,r_w ,out );
+module Bitcell_NAND ( in ,sel ,r_w ,out ,latch_nand1_out);
 
 input in;
 wire in;
@@ -39,12 +39,15 @@ wire out;
 
 // Enter your statements here //
 
-	// Intermediate signals
+// Intermediate signals
+	output latch_nand1_out;
+
 	wire nand1_out;
 	wire nand2_out;
 	wire latch_nand1_out;
 	wire latch_nand2_out;
-	wire not_r_w;  
+	wire not_r_w;
+	
 	
 	// NAND1: in & sel & r_w = nand1_out  
 	nand U1 (nand1_out, in, sel, r_w);
