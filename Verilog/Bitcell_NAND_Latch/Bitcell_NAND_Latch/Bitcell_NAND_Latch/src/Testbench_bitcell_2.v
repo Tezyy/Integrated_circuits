@@ -1,23 +1,17 @@
 `timescale 1ps/1ps
 
 module testbench_bitcell;
-    // Declare inputs as reg
-    reg r_w;
-    reg sel;
-    reg in;
+    // Declare inputs as logic
+    logic r_w;
+    logic sel;
+    logic in;
 
-    // Declare output as wire
-    wire out;
-	wire latch_nand1_out;
+    // Declare output as logic
+    logic out;
+	logic latch_nand1_out;
 
-    // Instantiate the DUT (Device Under Test), which is the logic_circuit
-    Bitcell_NAND DUT (
-        .r_w(r_w),
-        .sel(sel),
-        .in(in),
-        .out(out),
-		.latch_nand1_out(latch_nand1_out)
-    );
+    // Instantiate the DUT (Device Under Test)
+    Bitcell_NAND DUT (in, sel, r_w, out, latch_nand1_out);
 
     // Test cases
     initial begin
@@ -29,7 +23,6 @@ module testbench_bitcell;
         $monitor("%4dns\t %b   %b   %b  |  %b  %b", $time, r_w, sel, in, out, latch_nand1_out);
         
         // Apply different input combinations
-        // Format: r_w, sel, inp
 			
 		// Test case 1: r_w high, no result
         r_w = 1; sel = 0; in = 0;
@@ -71,8 +64,7 @@ module testbench_bitcell;
         r_w = 0; sel = 1; in = 0;
         #10;
 				
-        
-        // End the simulation
+
         $stop;
     end
 endmodule

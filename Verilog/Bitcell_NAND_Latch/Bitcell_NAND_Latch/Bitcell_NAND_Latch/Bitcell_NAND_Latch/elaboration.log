@@ -1,4 +1,4 @@
-Active-HDL 15.0.261.9132 2024-10-22 15:36:24
+Active-HDL 15.0.261.9132 2024-10-24 17:09:49
 
 Elaboration top modules:
 Verilog Module                testbench_bitcell
@@ -7,14 +7,14 @@ Verilog Module                testbench_bitcell
 ------------------------------------------------------------------------------------------------------
 Verilog Module          | Library            | Info | Compiler Version          | Compilation Options
 ------------------------------------------------------------------------------------------------------
-testbench_bitcell       | Bitcell_NAND_Latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-Bitcell_NAND            | Bitcell_NAND_Latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+testbench_bitcell       | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+Bitcell_NAND            | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 ------------------------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------------------------------
 Library                 | Comment
 ------------------------------------------------------------------------------------------------------
-Bitcell_NAND_Latch      | None
+bitcell_nand_latch      | None
 ------------------------------------------------------------------------------------------------------
 
 
