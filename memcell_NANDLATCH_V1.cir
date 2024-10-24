@@ -25,8 +25,8 @@ xMn1 out1 in1 gnd gnd nmos1v L=L1 W=W1
 xmp1 Vdd in1 out1 Vdd pmos1v L=Lpmos W=Wpmos
 xmp2 Vdd in2 out1 Vdd pmos1v L=Lpmos W=Wpmos
 
-xmn1 out1 in2 2 gnd nmos1v L=L1 W=W1
-xmn2 2 in1 gnd gnd nmos1v L=L1 W=W1
+xmn1 out1 in1 2 gnd nmos1v L=L1 W=W1
+xmn2 2 in2 gnd gnd nmos1v L=L1 W=W1
 .ends
 
 .subckt 3inNAND in1 in2 in3 out1 Vdd gnd
@@ -70,11 +70,11 @@ xmn2 out1 in2 gnd gnd nmos1v L=L1 W=W1
 
 *paramètres
 *  Transistor dimensions: 100nm < W < 1500nm and 100nm < L < 300nm
-.param Vdd=0.4
-.param L1=100n
-.param W1=1000n
-.param Lpmos=100n
-.param Wpmos=1000n
+.param Vdd=1
+.param L1=200n
+.param W1=600n
+.param Lpmos=200n
+.param Wpmos=1500n
 
 
 
@@ -102,16 +102,16 @@ xSRLATCH outNAND1 outNAND2 out_SRLATCH Vdd gnd SR_latch
 
 *Test signals
 V1 1 0 dc Vdd
-*Vinp in 0 PULSE(0 Vdd 35ns 0.1ns 0.1ns 10ns 50ns)
-*Vsel sel 0 PULSE(0 Vdd 15ns 0.1ns 0.1ns 5ns 10ns)
-*Vrw rw 0 PULSE(0 Vdd 10ns 0.1ns 0.1ns 10ns 20ns)
+Vinp in 0 PULSE(0 Vdd 35ns 0.1ns 0.1ns 10ns 50ns)
+Vsel sel 0 PULSE(0 Vdd 15ns 0.1ns 0.1ns 5ns 10ns)
+Vrw rw 0 PULSE(0 Vdd 10ns 0.1ns 0.1ns 10ns 20ns)
 
-Vinp in 0 PULSE(0 Vdd 35ns 0.1ns 0.1ns 25ns 50ns)
-Vsel sel 0 PULSE(0 Vdd 15ns 0.1ns 0.1ns 25ns 50ns)
-Vrw rw 0 PULSE(0 Vdd 10ns 0.1ns 0.1ns 20ns 40ns)
+*Vinp in 0 PULSE(0 Vdd 35ns 0.1ns 0.1ns 25ns 50ns)
+*Vsel sel 0 PULSE(0 Vdd 15ns 0.1ns 0.1ns 25ns 50ns)
+*Vrw rw 0 PULSE(0 Vdd 10ns 0.1ns 0.1ns 20ns 40ns)
 
 *Testing read/write time
-xBitcell in sel rw YYYY_cell YYYY_latch 1 0 bitcell
+xBitcell sel in rw YYYY_cell YYYY_latch 1 0 bitcell
 .plot v(in) v(sel) v(rw) v(YYYY_cell) v(YYYY_latch)
 *.plot i(v1)
 
@@ -130,6 +130,9 @@ Vin1 in1 0 PULSE(0 Vdd 0 1n 1n 10n 20n)
 Vin2 in2 0 PULSE(0 Vdd 0 1n 1n 20n 40n)
 Vin3 in3 0 PULSE(0 Vdd 0 1n 1n 40n 80n)
 
+
+* Test 1-input NOT gate
+xNOT_test in1 out_not voltage 0 1inNOT
 * Test 2-input AND gate
 xAND2_test in1 in2 out_and2 voltage 0 2inAND
 * Test 3-input AND gate
@@ -138,4 +141,13 @@ xAND3_test in1 in2 in3 out_and3 voltage 0 3inAND
 xNOR2_test in1 in2 out_nor2 voltage 0 2inNOR
 * Test 3-input NAND gate
 xNAND3_test in1 in2 in3 out_nand3 voltage 0 3inNAND
+
+* Test 2-input NAND gate
+xNAND2_test in1 in2 out_nand2 voltage 0 2inNAND
+
+* Test SRLATCH gate
+xlatch in1 in2 out_latch voltage 0 SR_latch
+
+xNAND1 in1 in2 in3 outNAND1 voltage 0 3inNAND
+xNAND2 outNAND1 in1 in2 outNAND2 voltage 0 3inNAND
 
