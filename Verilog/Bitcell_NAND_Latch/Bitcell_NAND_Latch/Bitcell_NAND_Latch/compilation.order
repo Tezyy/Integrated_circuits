@@ -1,3 +1,4 @@
 .\src\Bitcell_NAND.v
 .\src\Testbench_bitcell.v
 .\src\Wordcell.v
+.\src\Testbench_wordcell.v

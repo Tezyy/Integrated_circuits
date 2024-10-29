@@ -54,6 +54,10 @@ FileTimeLow=642788437
 FileTimeHigh=31140362
 Status=Compiled
 [COMPILESTATUS|.\src\Wordcell.v]
-FileTimeLow=2404055371
-FileTimeHigh=31140372
+FileTimeLow=373534990
+FileTimeHigh=31140377
+Status=Compiled
+[COMPILESTATUS|.\src\Testbench_wordcell.v]
+FileTimeLow=2649390761
+FileTimeHigh=31140378
 Status=Modified
