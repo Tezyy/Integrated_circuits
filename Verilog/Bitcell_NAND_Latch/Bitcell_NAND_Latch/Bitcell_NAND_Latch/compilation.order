@@ -2,3 +2,4 @@
 .\src\Testbench_bitcell.v
 .\src\Wordcell.v
 .\src\Testbench_wordcell.v
+.\src\Memory_unit.v

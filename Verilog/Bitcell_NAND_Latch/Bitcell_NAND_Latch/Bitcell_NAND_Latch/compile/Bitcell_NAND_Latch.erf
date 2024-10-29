@@ -1,0 +1,1 @@
+WARNING VCP2597 "Some unconnected ports remain at instance: wc. Module Wordcell has unconnected  port(s) : stored_data." "C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/Memory_unit.v" 16 1
