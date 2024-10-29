@@ -1,0 +1,9 @@
+*Leakage current mesure
+
+V1 1 0 dc Vdd
+Vinp in 0 dc 1
+Vsel sel 0 dc 1
+Vrw rw 0 dc 1
+*leakage measurement
+xBitcell sel in rw YYYY_cell YYYY_latch 1 0 bitcell
+.plot i(V1)
