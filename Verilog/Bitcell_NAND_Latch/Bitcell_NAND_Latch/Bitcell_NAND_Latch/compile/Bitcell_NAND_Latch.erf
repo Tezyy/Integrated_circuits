@@ -1,2 +1,0 @@
-WARNING VCP2515 "Undefined module: Decoder_3_to_8 was used. Port connection rules will not be checked at such instantiations." "C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/Testbench_address_decoder.v" 24 7
-WARNING VCP2597 "Some unconnected ports remain at instance: wc. Module Wordcell has unconnected  port(s) : stored_data." "C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/Memory_unit.v" 16 1
