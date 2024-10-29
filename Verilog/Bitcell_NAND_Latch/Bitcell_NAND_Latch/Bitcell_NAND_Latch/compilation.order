@@ -3,3 +3,5 @@
 .\src\Wordcell.v
 .\src\Testbench_wordcell.v
 .\src\Memory_unit.v
+.\src\Address_decoder.v
+.\src\Testbench_address_decoder.v

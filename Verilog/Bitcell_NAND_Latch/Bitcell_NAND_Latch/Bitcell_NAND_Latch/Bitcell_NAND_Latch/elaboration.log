@@ -1,4 +1,4 @@
-Active-HDL 15.0.261.9132 2024-10-29 17:31:00
+Active-HDL 15.0.261.9132 2024-10-29 18:12:11
 
 Elaboration top modules:
 Verilog Module                Testbench_wordcell
@@ -17,9 +17,3 @@ Library                 | Comment
 ------------------------------------------------------------------------------------------------------
 bitcell_nand_latch      | None
 ------------------------------------------------------------------------------------------------------
-
-
-Simulation Options: asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_wordcell
-
-
-The performance of simulation is reduced. Version Student Edition
