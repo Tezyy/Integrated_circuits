@@ -10,7 +10,7 @@ module Testbench_wordcell ();
 	logic [7:0] stored_value;
 	
 	// Initiate the DUT
-	wordcell DUT (op, sel_x, in_bus, out_bus, stored_value);
+	Wordcell DUT (op, sel_x, in_bus, out_bus, stored_value);
 	
 	//Test cases
 	initial begin

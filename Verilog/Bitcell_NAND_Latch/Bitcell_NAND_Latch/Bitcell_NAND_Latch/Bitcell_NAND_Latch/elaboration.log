@@ -1,14 +1,13 @@
-Active-HDL 15.0.261.9132 2024-10-29 17:11:08
+Active-HDL 15.0.261.9132 2024-10-29 17:28:34
 
 Elaboration top modules:
-Verilog Module                Testbench_wordcell
+Verilog Module                testbench_bitcell
 
 
 ------------------------------------------------------------------------------------------------------
 Verilog Module          | Library            | Info | Compiler Version          | Compilation Options
 ------------------------------------------------------------------------------------------------------
-Testbench_wordcell      | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-wordcell                | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+testbench_bitcell       | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 Bitcell_NAND            | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 ------------------------------------------------------------------------------------------------------
 
@@ -19,7 +18,7 @@ bitcell_nand_latch      | None
 ------------------------------------------------------------------------------------------------------
 
 
-Simulation Options: asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_wordcell
+Simulation Options: asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r testbench_bitcell
 
 
 The performance of simulation is reduced. Version Student Edition
