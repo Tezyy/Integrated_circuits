@@ -25,8 +25,6 @@ UCF=
 /Testbench_bitcell.v=-1
 [Files.Data]
 .\src\Bitcell_NAND.v=Verilog Source Code
-.\src\Testbench_bitcell.asf=State Diagram
-.\src\Testbench_bitcell.v=Verilog Source Code
 .\src\Testbench_bitcell.v=Verilog Source Code
 [HierarchyViewer]
 HierarchyInformation=
