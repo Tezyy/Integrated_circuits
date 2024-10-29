@@ -1,0 +1,35 @@
+*TEST LOGICAL GATES 
+
+.include gpdk90nm_tt.cir
+.include MEM_CELL_PROJECT_V2_NAND_LATCH.cir
+
+
+*NOT : ok NAND_3IN 
+Vdd voltage 0 dc Vdd
+Vin1 in1 0 PULSE(0 Vdd 0 1n 1n 10n 20n)
+Vin2 in2 0 PULSE(0 Vdd 0 1n 1n 20n 40n)
+Vin3 in3 0 PULSE(0 Vdd 0 1n 1n 40n 80n)
+
+
+*Test 1-input NOT gate
+xNOT_test in1 out_not voltage 0 1inNOT
+*Test 2-input AND gate
+xAND2_test in1 in2 out_and2 voltage 0 2inAND
+*Test 3-input AND gate
+xAND3_test in1 in2 in3 out_and3 voltage 0 3inAND
+*Test 2-input NOR gate
+xNOR2_test in1 in2 out_nor2 voltage 0 2inNOR
+*Test 3-input NAND gate
+xNAND3_test in1 in2 in3 out_nand3 voltage 0 3inNAND
+
+*Test 2-input NAND gate
+xNAND2_test in1 in2 out_nand2 voltage 0 2inNAND
+
+*Test SRLATCH gate
+xlatch in1 in2 out_latch voltage 0 SR_latch
+
+*test latch
+xNAND1 in1 in2 in3 outNAND1 voltage 0 3inNAND
+xNAND2 outNAND1 in1 in2 outNAND2 voltage 0 3inNAND
+
+

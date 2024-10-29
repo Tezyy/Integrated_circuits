@@ -1,0 +1,12 @@
+*WRITING_TIME_TEST
+
+V1 1 0 dc Vdd
+Vinp in 0 PULSE(0 Vdd 0ns 0.1ns 0.1ns 10ns 100ns)
+Vsel sel 0 PULSE(0 Vdd 0ns 0.1ns 0.1ns 100ns 100ns)
+Vrw rw 0 PULSE(0 Vdd 25ns 0.1ns 0.1ns 10ns 20ns)
+
+
+*Testing read/write time
+xBitcell sel in rw YYYY_cell YYYY_latch 1 0 bitcell
+.plot v(in) v(sel) v(rw) v(YYYY_cell) v(YYYY_latch)
+.plot v(YYYY_cell) v(YYYY_latch)
