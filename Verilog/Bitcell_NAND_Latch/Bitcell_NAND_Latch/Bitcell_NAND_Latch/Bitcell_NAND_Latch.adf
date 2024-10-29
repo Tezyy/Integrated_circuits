@@ -23,9 +23,11 @@ UCF=
 [Files]
 /Bitcell_NAND.v=-1
 /Testbench_bitcell.v=-1
+/Wordcell.v=-1
 [Files.Data]
 .\src\Bitcell_NAND.v=Verilog Source Code
 .\src\Testbench_bitcell.v=Verilog Source Code
+.\src\Wordcell.v=Verilog Source Code
 [HierarchyViewer]
 HierarchyInformation=
 ShowHide=ShowTopLevel
