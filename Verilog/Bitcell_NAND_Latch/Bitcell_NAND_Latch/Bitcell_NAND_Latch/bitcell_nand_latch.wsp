@@ -21,9 +21,9 @@ Status=Modified
 FileTimeLow=2029346960
 FileTimeHigh=31139365
 Status=Compiled
-[COMPILESTATUS|.\src\Testbench_bitcell_2.v]
-FileTimeLow=2371517541
-FileTimeHigh=31139381
+[COMPILESTATUS|.\src\Testbench_bitcell.v]
+FileTimeLow=3247426514
+FileTimeHigh=31140361
 Status=Modified
 [CACHEDOC|Aldec.Hde.HdePlugIn.7|.\Bitcell_NAND_Latch\src/Testbench_bitcell.v|]
 CurrentLine=8

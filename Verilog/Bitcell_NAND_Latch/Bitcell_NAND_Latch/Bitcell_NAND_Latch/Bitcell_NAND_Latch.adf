@@ -22,14 +22,12 @@ ON_SERVERFARM_SIM=0
 UCF=
 [Files]
 /Bitcell_NAND.v=-1
-/Testbench_bitcell.asf=-1
 /Testbench_bitcell.v=-1
-/Testbench_bitcell_2.v=-1
 [Files.Data]
 .\src\Bitcell_NAND.v=Verilog Source Code
 .\src\Testbench_bitcell.asf=State Diagram
 .\src\Testbench_bitcell.v=Verilog Source Code
-.\src\Testbench_bitcell_2.v=Verilog Source Code
+.\src\Testbench_bitcell.v=Verilog Source Code
 [HierarchyViewer]
 HierarchyInformation=
 ShowHide=ShowTopLevel
