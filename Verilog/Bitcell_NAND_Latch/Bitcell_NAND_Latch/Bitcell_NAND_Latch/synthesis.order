@@ -1,4 +1,7 @@
 i<>.\src\Bitcell_NAND.v
-i<>.\src\Testbench_bitcell.asf
-i<>.\src\Testbench_bitcell.v
 i<>.\src\Testbench_bitcell_2.v
+i<>.\src\Wordcell.v
+i<>.\src\Testbench_wordcell.v
+i<>.\src\Memory_unit.v
+i<>.\src\Address_decoder.v
+i<>.\src\Testbench_address_decoder.v
