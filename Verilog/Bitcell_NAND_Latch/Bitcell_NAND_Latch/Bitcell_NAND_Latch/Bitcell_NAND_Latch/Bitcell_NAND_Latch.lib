@@ -1,4 +1,4 @@
-timestamp=1731418781945
+timestamp=1731421209867
 
 [~A]
 C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/Address_decoder.v=0*193210*193868
@@ -6,28 +6,28 @@ C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latc
 C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/Bitcell_NAND.v_Testbench_bitcell.v=0*29325*30368
 C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/Bitcell_NAND.v_Testbench_bitcell.v_Wordcell.v_Testbench_wordcell.v=0*115811*117303
 C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/Bitcell_NAND.v_Testbench_bitcell.v_Wordcell.v_Testbench_wordcell.v_Memory_unit.v_Address_decoder.v_Testbench_address_decoder.v=0*125147*127259
-C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/Memory_unit.v=0*171628*172330
-C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/Memory_unit.v_Testbench_memory_unit.v=0*169277*170403
-C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/Testbench_address_decoder.v=0*195003*195847
+C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/Memory_unit.v=0*218408*219190
+C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/Memory_unit.v_Testbench_memory_unit.v=0*226401*227527
+C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/Testbench_address_decoder.v=0*224119*224963
 C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/Testbench_bitcell.v=0*18928*19764
 C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/Testbench_bitcell_2.v=0*23183*23957
-C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/Testbench_memory_unit.v=0*167051*167843
-C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/Testbench_wordcell.v=0*98311*99100
+C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/Testbench_memory_unit.v=0*206538*207330
+C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/Testbench_wordcell.v=0*222208*222997
 C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/Wordcell.v=0*118501*119184
-LastVerilogToplevel=testbench_decoder
-ModifyID=98
+LastVerilogToplevel=Testbench_memory_unit
+ModifyID=114
 Version=74
 
 [~MFT]
-0=6|0Bitcell_NAND_Latch.mgf|195847|122583
-1=4|1Bitcell_NAND_Latch.mgf|263568|244108
-3=8|3Bitcell_NAND_Latch.mgf|185899|172937
+0=7|0Bitcell_NAND_Latch.mgf|227527|145603
+1=6|1Bitcell_NAND_Latch.mgf|301339|281807
+3=12|3Bitcell_NAND_Latch.mgf|213460|200038
 
 [$root]
-A/$root=22|||1*263130
-BinW64/$root=3*184444
-SLP=3*184559
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|c73a565f2ade592f8ac1c68f484c921622cabbd7e74b486e60ca97a87daa21e7
+A/$root=22|||1*298876
+BinW64/$root=3*211277
+SLP=3*211392
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|c73a565f2ade592f8ac1c68f484c9216c1465a4c83cdb02b50086d55d2b0407d
 
 [Address_decoder]
 A/Address_decoder=22|../src/Address_decoder.v|3|1*171821
@@ -44,25 +44,25 @@ SLP=3*122280
 Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|ae2aeb74d827a10c1f33824501346c4264da033b963cc6c76070207cfe584843ee419f8731e512f0a0cf1e5fcab9b9e6
 
 [Memory_unit]
-A/Memory_unit=22|../src/Memory_unit.v|3|1*234787
-BinW64/Memory_unit=3*164019
+A/Memory_unit=22|../src/Memory_unit.v|3|1*299314
+BinW64/Memory_unit=3*211460
 R=../src/Memory_unit.v|3
-SLP=3*164470
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|8359b7ff9def0dcfedcc6e462658242affd90e65b6d9abb1020e9c61c0df65d8c79e0c5400575e7a8bd7f3c6a15d0bfb
+SLP=3*211950
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|8359b7ff9def0dcfedcc6e462658242affd90e65b6d9abb1020e9c61c0df65d8259056de53b9406bb9a105705050ec6c
 
 [Testbench_memory_unit]
-A/Testbench_memory_unit=22|../src/Testbench_memory_unit.v|3|1*232568
-BinW64/Testbench_memory_unit=3*161875
+A/Testbench_memory_unit=22|../src/Testbench_memory_unit.v|3|1*301339
+BinW64/Testbench_memory_unit=3*212262
 R=../src/Testbench_memory_unit.v|3
-SLP=3*163071
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|0154fd4133540e8625d0d89bf76cc90291b5f28234747f6ba5c0cdba654b064ad1ea5c4c614eb5d7ae86a1d26e5a6665
+SLP=3*213460
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|0154fd4133540e8625d0d89bf76cc90291b5f28234747f6ba5c0cdba654b064a8c3308f3134e286c0c106faed29c3d6d
 
 [Testbench_wordcell]
-A/Testbench_wordcell=22|../src/Testbench_wordcell.v|3|1*168580
-BinW64/Testbench_wordcell=3*125281
+A/Testbench_wordcell=22|../src/Testbench_wordcell.v|3|1*295421
+BinW64/Testbench_wordcell=3*206629
 R=../src/Testbench_wordcell.v|3
-SLP=3*126528
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|ac023d6fc448a5d03dafb20ff4e8d0b72c7c4f688b02e0403feff2fbcd924731cb54336662a9bd1b8fe065d0c3d0c0de
+SLP=3*207876
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|ac023d6fc448a5d03dafb20ff4e8d0b72c7c4f688b02e0403feff2fbcd924731b4a3d3b1e613c961c288a37280c49cec
 
 [Wordcell]
 A/Wordcell=22|../src/Wordcell.v|3|1*166951
@@ -100,11 +100,11 @@ SLP=3*123655
 Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|f4e54aefe1443b1e86255f6318f8b606e460ffa4f8c6de502c62e8b824e569300ab4d4e19fb66ebf8fd998f8a9b80b98
 
 [testbench_decoder]
-A/testbench_decoder=22|../src/Testbench_address_decoder.v|3|1*263568
-BinW64/testbench_decoder=3*184627
+A/testbench_decoder=22|../src/Testbench_address_decoder.v|3|1*297419
+BinW64/testbench_decoder=3*208937
 R=../src/Testbench_address_decoder.v|3
-SLP=3*185899
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|e28deebc215071f9e591f4934271a4a1edeb8ad5102b7ddb418db8a1fec1a866572c38320c8e370082b41a2161a205de
+SLP=3*210209
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|e28deebc215071f9e591f4934271a4a1edeb8ad5102b7ddb418db8a1fec1a866ae08f1b0b8d46db003f36a6a93f9b4e7
 
 [wordcell]
 A/wordcell=22|../src/Wordcell.v|3|1*61110
@@ -114,16 +114,16 @@ SLP=3*41377
 Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|98247ad8744fc7bb3a2f557b71b799d66b28b4e53bff683f3c57bc95b85ee1bcd338392720b1b7fe62dd379e9630ca5b
 
 [~U]
-$root=12|0*194503|
+$root=12|0*225624|
 Address_decoder=12|0*124785||0x10
 Bitcell_NAND=12|0*123700|
-Memory_unit=12|0*171384|
-Testbench_memory_unit=12|0*169065||0x10
-Testbench_wordcell=12|0*124357||0x10
+Memory_unit=12|0*225918|
+Testbench_memory_unit=12|0*226186||0x10
+Testbench_wordcell=12|0*222022||0x10
 Wordcell=12|0*124121|
 address_decoder=12|0*192973||0x10
 decoder_3to8=12|0*189119|
 tb_logic_circuit=12|0*5467||0x10
 testbench_bitcell=12|0*123931||0x10
-testbench_decoder=12|0*194813||0x10
+testbench_decoder=12|0*223929||0x10
 wordcell=12|0*45060||0x10

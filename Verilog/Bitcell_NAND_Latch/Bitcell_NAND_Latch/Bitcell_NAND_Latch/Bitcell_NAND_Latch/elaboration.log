@@ -1,14 +1,17 @@
-Active-HDL 15.0.261.9132 2024-11-12 14:39:42
+Active-HDL 15.0.261.9132 2024-11-12 15:20:09
 
 Elaboration top modules:
-Verilog Module                testbench_decoder
+Verilog Module                Testbench_memory_unit
 
 
 ------------------------------------------------------------------------------------------------------
 Verilog Module          | Library            | Info | Compiler Version          | Compilation Options
 ------------------------------------------------------------------------------------------------------
-testbench_decoder       | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+Testbench_memory_unit   | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+Memory_unit             | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 address_decoder         | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+Wordcell                | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+Bitcell_NAND            | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 ------------------------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------------------------------

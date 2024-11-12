@@ -4,7 +4,7 @@ module Testbench_wordcell ();
 
 	// creating logic signals
 	logic op;  
-	logic [7:0] sel_x;
+	logic sel_x;
 	logic [7:0] in_bus;
 	logic [7:0] out_bus;
 	logic [7:0] stored_value;
