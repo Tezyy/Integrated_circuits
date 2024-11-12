@@ -1,183 +1,17 @@
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_bitcell.v
-# Unit top modules: testbench_bitcell.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r testbench_bitcell
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.0 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.2 [s]
-# SLP: Finished : 0.2 [s]
-# SLP: 6 (85.71%) primitives and 1 (14.29%) other processes in SLP
-# SLP: 0 signals in SLP and 14 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.2 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5374 kB (elbread=427 elab2=4812 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  15:40, Tuesday, 12 November 2024
-#  Simulation has been initialized
-run
-# KERNEL: Time	 r_w sel inp | out stored_value
-# KERNEL: -----------------------------
-# KERNEL:    0ns	 1   0   0  |  0  x
-# KERNEL:   10ns	 0   0   0  |  0  x
-# KERNEL:   20ns	 1   0   1  |  0  x
-# KERNEL:   30ns	 0   0   1  |  0  x
-# KERNEL:   40ns	 1   1   0  |  0  0
-# KERNEL:   50ns	 0   1   0  |  0  0
-# KERNEL:   60ns	 0   1   1  |  0  0
-# KERNEL:   70ns	 1   1   1  |  0  1
-# KERNEL:   80ns	 0   1   1  |  1  1
-# KERNEL:   90ns	 0   1   0  |  1  1
-# RUNTIME: Info: RUNTIME_0070 Testbench_bitcell.v (66): $stop called.
-# KERNEL: Time: 100 ps,  Iteration: 0,  Instance: /testbench_bitcell,  Process: @INITIAL#15_1@.
-# KERNEL: Stopped at time 100 ps + 0.
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_address_decoder.v
-# Unit top modules: testbench_decoder.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r testbench_decoder
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.0 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.2 [s]
-# SLP: Finished : 0.2 [s]
-# SLP: 11 (91.67%) primitives and 1 (8.33%) other processes in SLP
-# SLP: 0 signals in SLP and 11 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.2 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5374 kB (elbread=427 elab2=4813 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  15:41, Tuesday, 12 November 2024
-#  Simulation has been initialized
-run
-# KERNEL: Time	 address select | sel_x
-# KERNEL: -----------------------------
-# KERNEL:    0ns	 000   0 |  00000000
-# KERNEL:   10ns	 100   0 |  00000000
-# KERNEL:   20ns	 010   0 |  00000000
-# KERNEL:   30ns	 110   0 |  00000000
-# KERNEL:   40ns	 001   0 |  00000000
-# KERNEL:   50ns	 101   0 |  00000000
-# KERNEL:   60ns	 011   0 |  00000000
-# KERNEL:   70ns	 111   0 |  00000000
-# KERNEL:   80ns	 000   1 |  00000001
-# KERNEL:   90ns	 100   1 |  00000010
-# KERNEL:  100ns	 010   1 |  00000100
-# KERNEL:  110ns	 110   1 |  00001000
-# KERNEL:  120ns	 001   1 |  00010000
-# KERNEL:  130ns	 101   1 |  00100000
-# KERNEL:  140ns	 011   1 |  01000000
-# KERNEL:  150ns	 111   1 |  10000000
-# RUNTIME: Info: RUNTIME_0070 Testbench_address_decoder.v (44): $stop called.
-# KERNEL: Time: 160 ps,  Iteration: 0,  Instance: /testbench_decoder,  Process: @INITIAL#18_1@.
-# KERNEL: Stopped at time 160 ps + 0.
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_wordcell.v
-# Unit top modules: Testbench_wordcell.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_wordcell
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.0 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.2 [s]
-# SLP: Finished : 0.2 [s]
-# SLP: 48 (97.96%) primitives and 1 (2.04%) other processes in SLP
-# SLP: 0 signals in SLP and 82 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.2 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5380 kB (elbread=428 elab2=4818 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  15:42, Tuesday, 12 November 2024
-#  Simulation has been initialized
-run
-# KERNEL: Time			op		sel_x		in_bus		 | out_bus		stored_value
-# KERNEL: ---------------------------------------------------
-# KERNEL:    0ns	1			0						01010101 | 00000000	xxxxxxxx
-# KERNEL:   10ns	0			0						01010101 | 00000000	xxxxxxxx
-# KERNEL:   20ns	0			1						01010101 | xxxxxxxx	xxxxxxxx
-# KERNEL:   30ns	1			1						01010101 | 00000000	01010101
-# KERNEL:   40ns	0			1						00000000 | 01010101	01010101
-# KERNEL:   50ns	0			0						00000000 | 00000000	01010101
-# KERNEL:   60ns	1			1						11001100 | 00000000	11001100
-# KERNEL:   70ns	0			1						00000000 | 11001100	11001100
-# RUNTIME: Info: RUNTIME_0070 Testbench_wordcell.v (59): $stop called.
-# KERNEL: Time: 80 ps,  Iteration: 0,  Instance: /Testbench_wordcell,  Process: @INITIAL#16_1@.
-# KERNEL: Stopped at time 80 ps + 0.
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
-# Unit top modules: Testbench_memory_unit.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Bitcell_NAND.v $dsn/src/Testbench_bitcell.v $dsn/src/Wordcell.v $dsn/src/Testbench_wordcell.v $dsn/src/Memory_unit.v $dsn/src/Address_decoder.v $dsn/src/Testbench_address_decoder.v $dsn/src/Testbench_memory_unit.v
-# Unit top modules: testbench_bitcell Testbench_wordcell testbench_decoder Testbench_memory_unit.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-endsim
-# VSIM: Simulation has finished.
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
 asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
 # VSIM: Stack memory: 32MB
 # VSIM: Retval memory: 32MB
 # 
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
+# Unit top modules: Testbench_memory_unit.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
 # KERNEL: Main thread initiated.
 # KERNEL: Kernel process initialization phase.
 # ELAB2: Elaboration final pass...
@@ -200,7 +34,7 @@ asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memor
 # KERNEL: Kernel process initialization done.
 # Allocation: Simulator allocated 5425 kB (elbread=436 elab2=4854 kernel=134 sdf=0)
 # KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  15:43, Tuesday, 12 November 2024
+#  15:47, Tuesday, 12 November 2024
 #  Simulation has been initialized
 run
 # KERNEL: Time			op		sel		adr		in_bus		 | out_bus		stored_value
@@ -214,3 +48,847 @@ run
 # KERNEL: Stopped at time 40 ps + 0.
 endsim
 # VSIM: Simulation has finished.
+asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
+# SLP: 0 signals in SLP and 637 (100.00%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5425 kB (elbread=436 elab2=4854 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
+#  15:50, Tuesday, 12 November 2024
+#  Simulation has been initialized
+run
+# KERNEL: Time			op		sel		adr		in_bus		 | out_bus		stored_value
+# KERNEL: ---------------------------------------------------
+# KERNEL:    0ns	1				0			000		01010101 | 00000000	xxxxxxxx
+# KERNEL:   10ns	1				1			000		01010101 | 00000000	xxxxxxxx
+# KERNEL:   20ns	0				1			000		01010101 | xxxxxxxx	xxxxxxxx
+# KERNEL:   30ns	0				0			000		01010101 | 00000000	xxxxxxxx
+# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (31): $stop called.
+# KERNEL: Time: 40 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#17_1@.
+# KERNEL: Stopped at time 40 ps + 0.
+# add wave -noreg {/Testbench_memory_unit/op}
+# VSIM: 1 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'C:/dev/DIC_SRAM/Integrated_circuits/Verilog/Bitcell_NAND_Latch/Bitcell_NAND_Latch/Bitcell_NAND_Latch/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
+# SLP: 0 signals in SLP and 637 (100.00%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5425 kB (elbread=436 elab2=4854 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
+#  15:51, Tuesday, 12 November 2024
+#  Simulation has been initialized
+run
+# KERNEL: Time			op		sel		adr		in_bus		 | out_bus		stored_value
+# KERNEL: ---------------------------------------------------
+# KERNEL:    0ns	1				0			000		01010101 | 00000000	xxxxxxxx
+# KERNEL:   10ns	1				1			000		01010101 | 00000000	xxxxxxxx
+# KERNEL:   20ns	0				1			000		01010101 | xxxxxxxx	xxxxxxxx
+# KERNEL:   30ns	0				0			000		01010101 | 00000000	xxxxxxxx
+# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (31): $stop called.
+# KERNEL: Time: 40 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#17_1@.
+# KERNEL: Stopped at time 40 ps + 0.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Memory_unit.v $dsn/src/Testbench_memory_unit.v
+# Error: VCP2000 Memory_unit.v : (29, 13): Syntax error. Unexpected token: ).
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
+# SLP: 0 signals in SLP and 637 (100.00%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5425 kB (elbread=436 elab2=4854 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
+#  16:22, Tuesday, 12 November 2024
+#  Simulation has been initialized
+run
+# KERNEL: Time			op		sel		adr		in_bus		 | out_bus		stored_value
+# KERNEL: ---------------------------------------------------
+# KERNEL:    0ns	1				0			000		01010101 | 00000000	xxxxxxxx
+# KERNEL:   10ns	1				1			000		01010101 | 00000000	xxxxxxxx
+# KERNEL:   20ns	0				1			000		01010101 | xxxxxxxx	xxxxxxxx
+# KERNEL:   30ns	0				0			000		01010101 | 00000000	xxxxxxxx
+# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (31): $stop called.
+# KERNEL: Time: 40 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#17_1@.
+# KERNEL: Stopped at time 40 ps + 0.
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Memory_unit.v
+# Warning: VCP2597 Memory_unit.v : (23, 1): Some unconnected ports remain at instance: wc. Module Wordcell has unconnected  port(s) : stored_data.
+# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
+# done
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELBREAD: Error: ELBREAD_0055 Testbench_memory_unit.v (14): Too many port connections. Region: /Testbench_memory_unit/DUT
+# KERNEL: Error: E8005 : Kernel process initialization failed.
+# VSIM: Error: Simulation initialization failed.
+asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELBREAD: Error: ELBREAD_0055 Testbench_memory_unit.v (14): Too many port connections. Region: /Testbench_memory_unit/DUT
+# KERNEL: Error: E8005 : Kernel process initialization failed.
+# VSIM: Error: Simulation initialization failed.
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
+# Warning: VCP7110 Testbench_memory_unit.v : (29, 122): No matching parameter found for format specifier: %b at system task call.
+# Unit top modules: Testbench_memory_unit.
+# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
+# done
+asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
+# SLP: 0 signals in SLP and 635 (100.00%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5425 kB (elbread=436 elab2=4853 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
+#  16:24, Tuesday, 12 November 2024
+#  Simulation has been initialized
+run
+# KERNEL: Time			op		sel		adr		in_bus		 | out_bus		stored_value
+# KERNEL: ---------------------------------------------------
+# KERNEL:    0ns	1				0			000		01010101 | 00000000	
+# KERNEL:   10ns	1				1			000		01010101 | 00000000	
+# KERNEL:   20ns	0				1			000		01010101 | 0x0x0x0x	
+# KERNEL:   30ns	0				0			000		01010101 | 00000000	
+# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (37): $stop called.
+# KERNEL: Time: 40 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#23_1@.
+# KERNEL: Stopped at time 40 ps + 0.
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
+# Warning: VCP7110 Testbench_memory_unit.v : (29, 122): No matching parameter found for format specifier: %b at system task call.
+# Unit top modules: Testbench_memory_unit.
+# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
+# done
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
+# SLP: 0 signals in SLP and 635 (100.00%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5425 kB (elbread=436 elab2=4854 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
+#  16:25, Tuesday, 12 November 2024
+#  Simulation has been initialized
+run
+# KERNEL: Time			op		sel		adr		in_bus		 | out_bus		stored_value
+# KERNEL: ---------------------------------------------------
+# KERNEL:    0ns	1				0			000		01010101 | 00000000	
+# KERNEL:   10ns	1				1			000		01010101 | 00000000	
+# KERNEL:   20ns	0				1			000		01010101 | 0x0x0x0x	
+# KERNEL:   30ns	0				0			000		01010101 | 00000000	
+# KERNEL:   40ns	0				1			100		00000000 | xxxxxxxx	
+# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (39): $stop called.
+# KERNEL: Time: 50 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#23_1@.
+# KERNEL: Stopped at time 50 ps + 0.
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Bitcell_NAND.v $dsn/src/Testbench_bitcell.v $dsn/src/Wordcell.v $dsn/src/Testbench_wordcell.v $dsn/src/Memory_unit.v $dsn/src/Address_decoder.v $dsn/src/Testbench_address_decoder.v $dsn/src/Testbench_memory_unit.v
+# Error: VCP2000 Testbench_memory_unit.v : (20, 9): Syntax error. Unexpected token: ..
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Bitcell_NAND.v $dsn/src/Testbench_bitcell.v $dsn/src/Wordcell.v $dsn/src/Testbench_wordcell.v $dsn/src/Memory_unit.v $dsn/src/Address_decoder.v $dsn/src/Testbench_address_decoder.v $dsn/src/Testbench_memory_unit.v
+# Error: VCP2000 Testbench_memory_unit.v : (20, 9): Syntax error. Unexpected token: ..
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Bitcell_NAND.v $dsn/src/Testbench_bitcell.v $dsn/src/Wordcell.v $dsn/src/Testbench_wordcell.v $dsn/src/Memory_unit.v $dsn/src/Address_decoder.v $dsn/src/Testbench_address_decoder.v $dsn/src/Testbench_memory_unit.v
+# Error: VCP2000 Testbench_memory_unit.v : (20, 36): Syntax error. Unexpected token: ;.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
+# Error: VCP2000 Testbench_memory_unit.v : (20, 36): Syntax error. Unexpected token: ;.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+endsim
+# VSIM: Simulation has finished.
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
+# Error: VCP2000 Testbench_memory_unit.v : (20, 36): Syntax error. Unexpected token: ;.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
+# Warning: VCP2590 Testbench_memory_unit.v : (20, 1): Undefined port stored_value in module Memory_unit.
+# Unit top modules: Testbench_memory_unit.
+# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
+# Warning: VCP2590 Testbench_memory_unit.v : (20, 1): Undefined port stored_value in module Memory_unit.
+# Unit top modules: Testbench_memory_unit.
+# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
+# Warning: VCP2590 Testbench_memory_unit.v : (20, 1): Undefined port stored_value in module Memory_unit.
+# Unit top modules: Testbench_memory_unit.
+# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
+# done
+asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Memory_unit.v
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
+# SLP: 0 signals in SLP and 637 (100.00%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5426 kB (elbread=436 elab2=4855 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
+#  16:37, Tuesday, 12 November 2024
+#  Simulation has been initialized
+run
+# KERNEL: Time			op		sel		adr		in_bus		 | out_bus		stored_value
+# KERNEL: ---------------------------------------------------
+# KERNEL:    0ns	1				0			000		01010101 | 00000000	xxxxxxxx
+# KERNEL:   10ns	1				1			000		01010101 | 00000000	01010101
+# KERNEL:   20ns	0				1			000		01010101 | 0x0x0x0x	01010101
+# KERNEL:   30ns	0				0			000		01010101 | 00000000	01010101
+# KERNEL:   40ns	0				1			100		00000000 | xxxxxxxx	01010101
+# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (40): $stop called.
+# KERNEL: Time: 50 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#24_1@.
+# KERNEL: Stopped at time 50 ps + 0.
+run
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
+# Unit top modules: Testbench_memory_unit.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
+# SLP: 0 signals in SLP and 637 (100.00%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5429 kB (elbread=436 elab2=4858 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
+#  16:40, Tuesday, 12 November 2024
+#  Simulation has been initialized
+run
+# KERNEL: Time			op		sel		adr		in_bus		 | out_bus		stored_value
+# KERNEL: ---------------------------------------------------
+# KERNEL:    0ns	1				1			000		00000000 | 00000000	00000000
+# KERNEL:   10ns	1				1			100		00000000 | 00000000	00000000
+# KERNEL:   20ns	1				1			010		00000000 | 00000000	00000000
+# KERNEL:   30ns	1				1			110		00000000 | 00000000	00000000
+# KERNEL:   40ns	1				1			001		00000000 | 00000000	00000000
+# KERNEL:   50ns	1				1			101		00000000 | 00000000	00000000
+# KERNEL:   60ns	1				1			011		00000000 | 00000000	00000000
+# KERNEL:   70ns	1				1			111		00000000 | 00000000	00000000
+# KERNEL:   80ns	1				0			000		01010101 | 00000000	00000000
+# KERNEL:   90ns	1				1			000		01010101 | 00000000	01010101
+# KERNEL:  100ns	0				1			000		01010101 | 0x0x0x0x	01010101
+# KERNEL:  110ns	0				0			000		01010101 | 00000000	01010101
+# KERNEL:  120ns	0				1			100		00000000 | 00000000	01010101
+# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (50): $stop called.
+# KERNEL: Time: 130 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#24_1@.
+# KERNEL: Stopped at time 130 ps + 0.
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
+# Unit top modules: Testbench_memory_unit.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
+# SLP: 0 signals in SLP and 637 (100.00%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.5 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5429 kB (elbread=436 elab2=4858 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
+#  16:41, Tuesday, 12 November 2024
+#  Simulation has been initialized
+run
+# KERNEL: Time			op		sel		adr		in_bus		 | out_bus		wc0		wc1
+# KERNEL: ---------------------------------------------------
+# KERNEL:    0ns	1				1			000		00000000 | 00000000	00000000	xxxxxxxx
+# KERNEL:   10ns	1				1			100		00000000 | 00000000	00000000	00000000
+# KERNEL:   20ns	1				1			010		00000000 | 00000000	00000000	00000000
+# KERNEL:   30ns	1				1			110		00000000 | 00000000	00000000	00000000
+# KERNEL:   40ns	1				1			001		00000000 | 00000000	00000000	00000000
+# KERNEL:   50ns	1				1			101		00000000 | 00000000	00000000	00000000
+# KERNEL:   60ns	1				1			011		00000000 | 00000000	00000000	00000000
+# KERNEL:   70ns	1				1			111		00000000 | 00000000	00000000	00000000
+# KERNEL:   80ns	1				0			000		01010101 | 00000000	00000000	00000000
+# KERNEL:   90ns	1				1			000		01010101 | 00000000	01010101	00000000
+# KERNEL:  100ns	0				1			000		01010101 | 0x0x0x0x	01010101	00000000
+# KERNEL:  110ns	0				0			000		01010101 | 00000000	01010101	00000000
+# KERNEL:  120ns	0				1			100		00000000 | 00000000	01010101	00000000
+# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (50): $stop called.
+# KERNEL: Time: 130 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#24_1@.
+# KERNEL: Stopped at time 130 ps + 0.
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
+# Unit top modules: Testbench_memory_unit.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
+# SLP: 0 signals in SLP and 637 (100.00%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5431 kB (elbread=436 elab2=4860 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
+#  16:42, Tuesday, 12 November 2024
+#  Simulation has been initialized
+run
+# KERNEL: Time			op		sel		adr		in_bus		 | out_bus		wc0		wc1
+# KERNEL: ---------------------------------------------------
+# KERNEL:    0ns	1				1			000		00000000 | 00000000	00000000		xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# KERNEL:   10ns	1				1			100		00000000 | 00000000	00000000		00000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# KERNEL:   20ns	1				1			010		00000000 | 00000000	00000000		0000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# KERNEL:   30ns	1				1			110		00000000 | 00000000	00000000		000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# KERNEL:   40ns	1				1			001		00000000 | 00000000	00000000		00000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxx
+# KERNEL:   50ns	1				1			101		00000000 | 00000000	00000000		0000000000000000000000000000000000000000xxxxxxxxxxxxxxxx
+# KERNEL:   60ns	1				1			011		00000000 | 00000000	00000000		000000000000000000000000000000000000000000000000xxxxxxxx
+# KERNEL:   70ns	1				1			111		00000000 | 00000000	00000000		00000000000000000000000000000000000000000000000000000000
+# KERNEL:   80ns	1				0			000		01010101 | 00000000	00000000		00000000000000000000000000000000000000000000000000000000
+# KERNEL:   90ns	1				1			000		01010101 | 00000000	01010101		00000000000000000000000000000000000000000000000000000000
+# KERNEL:  100ns	0				1			000		01010101 | 0x0x0x0x	01010101		00000000000000000000000000000000000000000000000000000000
+# KERNEL:  110ns	0				0			000		01010101 | 00000000	01010101		00000000000000000000000000000000000000000000000000000000
+# KERNEL:  120ns	0				1			100		00000000 | 00000000	01010101		00000000000000000000000000000000000000000000000000000000
+# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (52): $stop called.
+# KERNEL: Time: 130 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#24_1@.
+# KERNEL: Stopped at time 130 ps + 0.
+run
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
+# Unit top modules: Testbench_memory_unit.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
+# SLP: 0 signals in SLP and 637 (100.00%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5431 kB (elbread=436 elab2=4860 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
+#  16:43, Tuesday, 12 November 2024
+#  Simulation has been initialized
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
+# SLP: 0 signals in SLP and 637 (100.00%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5431 kB (elbread=436 elab2=4860 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
+#  16:43, Tuesday, 12 November 2024
+#  Simulation has been initialized
+run
+# KERNEL: Time			op		sel		adr		in_bus		 | out_bus		wc0						wc1
+# KERNEL: --------------------------------------------------------------------------------------------------------------------------
+# KERNEL:    0ns	1				1			000		00000000 | 00000000	00000000		xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   10ns	1				1			100		00000000 | 00000000	00000000		00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   20ns	1				1			010		00000000 | 00000000	00000000		00000000	00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   30ns	1				1			110		00000000 | 00000000	00000000		00000000	00000000	00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   40ns	1				1			001		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   50ns	1				1			101		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	xxxxxxxx	xxxxxxxx
+# KERNEL:   60ns	1				1			011		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	00000000	xxxxxxxx
+# KERNEL:   70ns	1				1			111		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:   80ns	1				0			000		01010101 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:   90ns	1				1			000		01010101 | 00000000	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:  100ns	0				1			000		01010101 | 0x0x0x0x	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:  110ns	0				0			000		01010101 | 00000000	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:  120ns	0				1			100		00000000 | 00000000	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (52): $stop called.
+# KERNEL: Time: 130 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#24_1@.
+# KERNEL: Stopped at time 130 ps + 0.
+run
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
+# Unit top modules: Testbench_memory_unit.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
+# SLP: 0 signals in SLP and 637 (100.00%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5431 kB (elbread=436 elab2=4860 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
+#  16:43, Tuesday, 12 November 2024
+#  Simulation has been initialized
+run
+# KERNEL: Time			op		sel		adr		in_bus		 | out_bus		wc0								wc1
+# KERNEL: --------------------------------------------------------------------------------------------------------------------------
+# KERNEL:    0ns	1				1			000		00000000 | 00000000	00000000		xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   10ns	1				1			100		00000000 | 00000000	00000000		00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   20ns	1				1			010		00000000 | 00000000	00000000		00000000	00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   30ns	1				1			110		00000000 | 00000000	00000000		00000000	00000000	00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   40ns	1				1			001		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   50ns	1				1			101		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	xxxxxxxx	xxxxxxxx
+# KERNEL:   60ns	1				1			011		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	00000000	xxxxxxxx
+# KERNEL:   70ns	1				1			111		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:   80ns	1				0			000		01010101 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:   90ns	1				1			000		01010101 | 00000000	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:  100ns	0				1			000		01010101 | 0x0x0x0x	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:  110ns	0				0			000		01010101 | 00000000	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:  120ns	0				1			100		00000000 | 00000000	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (52): $stop called.
+# KERNEL: Time: 130 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#24_1@.
+# KERNEL: Stopped at time 130 ps + 0.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
+# Unit top modules: Testbench_memory_unit.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
+# SLP: 0 signals in SLP and 637 (100.00%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5431 kB (elbread=436 elab2=4860 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
+#  16:44, Tuesday, 12 November 2024
+#  Simulation has been initialized
+run
+# KERNEL: Time			op		sel		adr		in_bus		 | out_bus		wc0							wc1							wc2							wc3							wc4							wc5							wc6							wc7
+# KERNEL: --------------------------------------------------------------------------------------------------------------------------
+# KERNEL:    0ns	1				1			000		00000000 | 00000000	00000000		xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   10ns	1				1			100		00000000 | 00000000	00000000		00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   20ns	1				1			010		00000000 | 00000000	00000000		00000000	00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   30ns	1				1			110		00000000 | 00000000	00000000		00000000	00000000	00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   40ns	1				1			001		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   50ns	1				1			101		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	xxxxxxxx	xxxxxxxx
+# KERNEL:   60ns	1				1			011		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	00000000	xxxxxxxx
+# KERNEL:   70ns	1				1			111		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:   80ns	1				0			000		01010101 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:   90ns	1				1			000		01010101 | 00000000	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:  100ns	0				1			000		01010101 | 0x0x0x0x	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:  110ns	0				0			000		01010101 | 00000000	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:  120ns	0				1			100		00000000 | 00000000	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (52): $stop called.
+# KERNEL: Time: 130 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#24_1@.
+# KERNEL: Stopped at time 130 ps + 0.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
+# Unit top modules: Testbench_memory_unit.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
+# SLP: 0 signals in SLP and 637 (100.00%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5431 kB (elbread=436 elab2=4860 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
+#  16:44, Tuesday, 12 November 2024
+#  Simulation has been initialized
+run
+# KERNEL: Time			op		sel		adr		in_bus		 | out_bus		wc0							wc1						wc2							wc3							wc4							wc5							wc6							wc7
+# KERNEL: --------------------------------------------------------------------------------------------------------------------------
+# KERNEL:    0ns	1				1			000		00000000 | 00000000	00000000		xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   10ns	1				1			100		00000000 | 00000000	00000000		00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   20ns	1				1			010		00000000 | 00000000	00000000		00000000	00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   30ns	1				1			110		00000000 | 00000000	00000000		00000000	00000000	00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   40ns	1				1			001		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   50ns	1				1			101		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	xxxxxxxx	xxxxxxxx
+# KERNEL:   60ns	1				1			011		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	00000000	xxxxxxxx
+# KERNEL:   70ns	1				1			111		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:   80ns	1				0			000		01010101 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:   90ns	1				1			000		01010101 | 00000000	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:  100ns	0				1			000		01010101 | 0x0x0x0x	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:  110ns	0				0			000		01010101 | 00000000	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:  120ns	0				1			100		00000000 | 00000000	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (52): $stop called.
+# KERNEL: Time: 130 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#24_1@.
+# KERNEL: Stopped at time 130 ps + 0.
+run
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
+# Unit top modules: Testbench_memory_unit.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
+# SLP: 0 signals in SLP and 637 (100.00%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5431 kB (elbread=436 elab2=4860 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
+#  16:45, Tuesday, 12 November 2024
+#  Simulation has been initialized
+run
+# KERNEL: Time			op		sel		adr		in_bus		 | out_bus		wc0							wc1						wc2						wc3						wc4						wc5						wc6						wc7
+# KERNEL: ------------------------------------------------------------------------------------------------------------------
+# KERNEL:    0ns	1				1			000		00000000 | 00000000	00000000		xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   10ns	1				1			100		00000000 | 00000000	00000000		00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   20ns	1				1			010		00000000 | 00000000	00000000		00000000	00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   30ns	1				1			110		00000000 | 00000000	00000000		00000000	00000000	00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   40ns	1				1			001		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   50ns	1				1			101		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	xxxxxxxx	xxxxxxxx
+# KERNEL:   60ns	1				1			011		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	00000000	xxxxxxxx
+# KERNEL:   70ns	1				1			111		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:   80ns	1				0			000		01010101 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:   90ns	1				1			000		01010101 | 00000000	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:  100ns	0				1			000		01010101 | 0x0x0x0x	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:  110ns	0				0			000		01010101 | 00000000	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:  120ns	0				1			100		00000000 | 00000000	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (52): $stop called.
+# KERNEL: Time: 130 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#24_1@.
+# KERNEL: Stopped at time 130 ps + 0.
+run
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
+# Unit top modules: Testbench_memory_unit.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
+# SLP: 0 signals in SLP and 637 (100.00%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5432 kB (elbread=436 elab2=4860 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
+#  16:49, Tuesday, 12 November 2024
+#  Simulation has been initialized
+run
+# KERNEL: Time			op		sel		adr		in_bus		 | out_bus		wc0							wc1						wc2						wc3						wc4						wc5						wc6						wc7
+# KERNEL: ------------------------------------------------------------------------------------------------------------------
+# KERNEL:    0ns	1				1			000		00000000 | 00000000	00000000		xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   10ns	1				1			100		00000000 | 00000000	00000000		00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   20ns	1				1			010		00000000 | 00000000	00000000		00000000	00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   30ns	1				1			110		00000000 | 00000000	00000000		00000000	00000000	00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   40ns	1				1			001		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	xxxxxxxx	xxxxxxxx	xxxxxxxx
+# KERNEL:   50ns	1				1			101		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	xxxxxxxx	xxxxxxxx
+# KERNEL:   60ns	1				1			011		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	00000000	xxxxxxxx
+# KERNEL:   70ns	1				1			111		00000000 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:   80ns	1				0			000		01010101 | 00000000	00000000		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:   90ns	1				1			000		01010101 | 00000000	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:  100ns	0				1			000		01010101 | 0x0x0x0x	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:  110ns	0				0			000		01010101 | 00000000	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:  120ns	0				1			100		00000000 | 00000000	01010101		00000000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:  130ns	1				1			100		11110000 | 00000000	01010101		11110000	00000000	00000000	00000000	00000000	00000000	00000000
+# KERNEL:  140ns	0				1			100		00000000 | xxxx0000	01010101		11110000	00000000	00000000	00000000	00000000	00000000	00000000
+# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (54): $stop called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#24_1@.
+# KERNEL: Stopped at time 150 ps + 0.
+endsim
+# VSIM: Simulation has finished.
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Bitcell_NAND.v $dsn/src/Testbench_bitcell.v $dsn/src/Wordcell.v $dsn/src/Testbench_wordcell.v $dsn/src/Memory_unit.v $dsn/src/Address_decoder.v $dsn/src/Testbench_address_decoder.v $dsn/src/Testbench_memory_unit.v
+# Unit top modules: testbench_bitcell Testbench_wordcell testbench_decoder Testbench_memory_unit.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done

@@ -1,6 +1,6 @@
 `timescale 1ps / 1ps
 
-module Memory_unit (input op, input select, input [2:0] address, input [7:0] in_bus, output [7:0] out_bus, output [7:0] stored_value);
+module Memory_unit (input op, input select, input [2:0] address, input [7:0] in_bus, output [7:0] out_bus, output [7:0] stored_value[7:0]);
 	
 	// Set up intermediate lines
 	wire [7:0] sel_x;
@@ -25,7 +25,7 @@ module Memory_unit (input op, input select, input [2:0] address, input [7:0] in_
 				.sel_x(sel_x[j]),
 				.in_bus(in_bus),
 				.out_bus(out_bus),
-				.stored_data(stored_value)
+				.stored_data(stored_value[j])
             );
         end
     endgenerate

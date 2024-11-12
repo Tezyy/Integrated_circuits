@@ -1,4 +1,4 @@
-Active-HDL 15.0.261.9132 2024-11-12 15:43:29
+Active-HDL 15.0.261.9132 2024-11-12 16:48:59
 
 Elaboration top modules:
 Verilog Module                Testbench_memory_unit
@@ -19,9 +19,3 @@ Library                 | Comment
 ------------------------------------------------------------------------------------------------------
 bitcell_nand_latch      | None
 ------------------------------------------------------------------------------------------------------
-
-
-Simulation Options: asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
-
-
-The performance of simulation is reduced. Version Student Edition
