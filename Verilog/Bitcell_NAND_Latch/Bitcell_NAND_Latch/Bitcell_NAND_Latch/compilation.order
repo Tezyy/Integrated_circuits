@@ -5,3 +5,4 @@
 .\src\Memory_unit.v
 .\src\Address_decoder.v
 .\src\Testbench_address_decoder.v
+.\src\Testbench_memory_unit.v

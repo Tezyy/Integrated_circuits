@@ -1,54 +1,47 @@
 `timescale 1ps/1ps
 
 module testbench_decoder;
-    // Declare inputs as reg
-    reg adr0, adr1, adr2, E;
-
-    // Declare output as wire
-    wire Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7;
+ 
+	logic select;
+	logic [2:0] address;
+	logic [7:0] sel_x;
 	
-
-    Decoder_3_to_8 DUT(
-        .adr0(adr0),
-        .adr1(adr1),
-        .adr2(adr2),
-        .E(E),
-        .Y0(Y0),
-        .Y1(Y1),
-        .Y2(Y2),
-        .Y3(Y3),
-        .Y4(Y4),
-        .Y5(Y5),
-        .Y6(Y6),
-        .Y7(Y7)
-    );
-    initial begin 
-
-    // Display the header for the simulation results
-    $display("Time\t r_w sel inp E | Y0 Y1 Y2 Y3 Y4 Y5 Y6 Y7");
+	
+    address_decoder DUT(
+		.select(select),
+		.adr0(address[0]),
+        .adr1(address[1]),
+        .adr2(address[2]),
+		.sel_x(sel_x)
+	);
+	
+	initial begin	
+		// Display the header for the simulation results
+    $display("Time\t address select | sel_x");
     $display("-----------------------------");
         
     // Monitor signal changes and print them during simulation
-    $monitor("%4dns\t %b   %b   %b  %b  |  %b  %b  %b  %b  %b  %b  %b  %b", $time, adr0, adr1, adr2, E, Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7);
-        
-        adr0=0; adr1=0; adr2=0; E=0;
-        adr0=0; adr1=0; adr2=1; E=0;
-        adr0=0; adr1=1; adr2=0; E=0;
-        adr0=0; adr1=1; adr2=1; E=0;
-        adr0=1; adr1=0; adr2=0; E=0;
-        adr0=1; adr1=0; adr2=1; E=0;
-        adr0=1; adr1=1; adr2=0; E=0;
-        adr0=1; adr1=1; adr2=1; E=0;
-
-    //enable 1
-        adr0=0; adr1=0; adr2=0; E=1;
-        adr0=0; adr1=0; adr2=1; E=1;
-        adr0=0; adr1=1; adr2=0; E=1;
-        adr0=0; adr1=1; adr2=1; E=1;
-        adr0=1; adr1=0; adr2=0; E=1;
-        adr0=1; adr1=0; adr2=1; E=1;
-        adr0=1; adr1=1; adr2=0; E=1;
-        adr0=1; adr1=1; adr2=1; E=1;
-      
+    $monitor("%4dns\t %b   %b |  %b", $time, address, select, sel_x);
+	
+		address=3'b000; select=0; #10;
+		address=3'b100; select=0; #10;
+		address=3'b010; select=0; #10;
+		address=3'b110; select=0; #10;
+		address=3'b001; select=0; #10;
+		address=3'b101; select=0; #10;
+		address=3'b011; select=0; #10;
+		address=3'b111; select=0; #10; 
+		
+		address=3'b000; select=1; #10;
+		address=3'b100; select=1; #10;
+		address=3'b010; select=1; #10;
+		address=3'b110; select=1; #10;
+		address=3'b001; select=1; #10;
+		address=3'b101; select=1; #10;
+		address=3'b011; select=1; #10;
+		address=3'b111; select=1; #10;
+      	
+		$stop;
     end
+	
 endmodule
