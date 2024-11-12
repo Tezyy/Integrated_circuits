@@ -1,12 +1,12 @@
 `timescale 1ps/1ps
 
 module testbench_bitcell;
-    // Declare logic signals
-    logic r_w;
-    logic sel;
-    logic in;	
-    logic out;
-	logic stored_value;
+    // Declare signals
+    reg r_w;
+    reg sel;
+    reg in;	
+    wire out;
+	wire stored_value;
 
     // Instantiate the DUT (Device Under Test)
     Bitcell_NAND DUT (in, sel, r_w, out, stored_value);

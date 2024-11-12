@@ -1,48 +1,12 @@
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Address_decoder.v
-# Unit top modules: decoder_3to8.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Memory_unit.v
-# Error: VCP2000 Memory_unit.v : (15, 11): Syntax error. Unexpected token: genvar[_GENVAR]. This is a Verilog keyword since IEEE Std 1364-2001 and cannot be used as an identifier. Use -v95 argument for compilation.
-# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Memory_unit.v
-# Warning: VCP2597 Memory_unit.v : (6, 1): Some unconnected ports remain at instance: ad. Module decoder_3to8 has unconnected  port(s) : Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7.
-# Warning: VCP2597 Memory_unit.v : (19, 1): Some unconnected ports remain at instance: wc. Module Wordcell has unconnected  port(s) : stored_data.
-# Unit top modules: Memory_unit.
-# Compile success 0 Errors 2 Warnings  Analysis time: 0[s].
-# done
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Address_decoder.v
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Address_decoder.v
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Memory_unit.v
-# Warning: VCP2597 Memory_unit.v : (6, 1): Some unconnected ports remain at instance: ad. Module decoder_3to8 has unconnected  port(s) : Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7, sel_x.
-# Warning: VCP2597 Memory_unit.v : (19, 1): Some unconnected ports remain at instance: wc. Module Wordcell has unconnected  port(s) : stored_data.
-# Unit top modules: Memory_unit.
-# Compile success 0 Errors 2 Warnings  Analysis time: 0[s].
-# done
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
-# Error: VCP5103 Testbench_memory_unit.v : (22, 78): Undeclared identifier: sel_x.
-# Error: VCP5103 Testbench_memory_unit.v : (22, 109): Undeclared identifier: stored_value.
-# Warning: VCP7126 Testbench_memory_unit.v : (22, 109): Null argument passed with format specifier %b.
-# Warning: VCP7126 Testbench_memory_unit.v : (22, 109): Null argument passed with format specifier %b.
-# Error: VCP5103 Testbench_memory_unit.v : (27, 23): Undeclared identifier: sel_x.
-# Compile failure 3 Errors 2 Warnings  Analysis time: 0[s].
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
-# Unit top modules: Testbench_memory_unit.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
-# Unit top modules: Testbench_memory_unit.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
-asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_wordcell
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_bitcell.v
+# Unit top modules: testbench_bitcell.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r testbench_bitcell
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
 # VSIM: Stack memory: 32MB
@@ -58,1102 +22,38 @@ asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_wordc
 # SLP: Elaboration phase ...
 # SLP: Elaboration phase ... done : 0.0 [s]
 # SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.7 [s]
-# SLP: Finished : 0.8 [s]
-# SLP: 48 (97.96%) primitives and 1 (2.04%) other processes in SLP
-# SLP: 0 signals in SLP and 82 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.9 [s].
+# SLP: Generation phase ... done : 0.2 [s]
+# SLP: Finished : 0.2 [s]
+# SLP: 6 (85.71%) primitives and 1 (14.29%) other processes in SLP
+# SLP: 0 signals in SLP and 14 (100.00%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
 # KERNEL: SLP loading done - time: 0.0 [s].
 # KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: SLP simulation initialization done - time: 0.0 [s].
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5380 kB (elbread=428 elab2=4818 kernel=134 sdf=0)
+# Allocation: Simulator allocated 5374 kB (elbread=427 elab2=4812 kernel=134 sdf=0)
 # KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  12:29, Tuesday, 12 November 2024
+#  15:40, Tuesday, 12 November 2024
 #  Simulation has been initialized
 run
-# KERNEL: Time			op		sel_x		in_bus		 | out_bus		stored_value
-# KERNEL: ---------------------------------------------------
-# KERNEL:    0ns	1			0						01010101 | 00000000	xxxxxxxx
-# KERNEL:   10ns	0			0						01010101 | 00000000	xxxxxxxx
-# KERNEL:   20ns	0			1						01010101 | xxxxxxxx	xxxxxxxx
-# KERNEL:   30ns	1			1						01010101 | 00000000	01010101
-# KERNEL:   40ns	0			1						00000000 | 01010101	01010101
-# KERNEL:   50ns	0			0						00000000 | 00000000	01010101
-# KERNEL:   60ns	1			1						11001100 | 00000000	11001100
-# KERNEL:   70ns	0			1						00000000 | 11001100	11001100
-# RUNTIME: Info: RUNTIME_0070 Testbench_wordcell.v (59): $stop called.
-# KERNEL: Time: 80 ps,  Iteration: 0,  Instance: /Testbench_wordcell,  Process: @INITIAL#16_1@.
-# KERNEL: Stopped at time 80 ps + 0.
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.1 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.3 [s]
-# SLP: Finished : 0.4 [s]
-# SLP: 403 (99.75%) primitives and 1 (0.25%) other processes in SLP
-# SLP: 0 signals in SLP and 650 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.5 [s].
-# KERNEL: SLP loading done - time: 0.1 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5426 kB (elbread=436 elab2=4854 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  12:29, Tuesday, 12 November 2024
-#  Simulation has been initialized
-run
-# KERNEL: Time			op		sel		adr	in_bus		 | out_bus
-# KERNEL: ---------------------------------------------------
-# KERNEL:    0ns	1			0						000 | 01010101	00000000
-# KERNEL:   10ns	1			1						000 | 01010101	00000000
-# KERNEL:   20ns	0			1						000 | 01010101	0x0x0x0x
-# KERNEL:   30ns	0			0						000 | 01010101	00000000
-# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (37): $stop called.
-# KERNEL: Time: 40 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#16_1@.
-# KERNEL: Stopped at time 40 ps + 0.
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_wordcell
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Finished. Using existing simulator library
-# SLP: 48 (97.96%) primitives and 1 (2.04%) other processes in SLP
-# SLP: 0 signals in SLP and 82 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5380 kB (elbread=428 elab2=4818 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  12:33, Tuesday, 12 November 2024
-#  Simulation has been initialized
-run
-# KERNEL: Time			op		sel_x		in_bus		 | out_bus		stored_value
-# KERNEL: ---------------------------------------------------
-# KERNEL:    0ns	1			0						01010101 | 00000000	xxxxxxxx
-# KERNEL:   10ns	0			0						01010101 | 00000000	xxxxxxxx
-# KERNEL:   20ns	0			1						01010101 | xxxxxxxx	xxxxxxxx
-# KERNEL:   30ns	1			1						01010101 | 00000000	01010101
-# KERNEL:   40ns	0			1						00000000 | 01010101	01010101
-# KERNEL:   50ns	0			0						00000000 | 00000000	01010101
-# KERNEL:   60ns	1			1						11001100 | 00000000	11001100
-# KERNEL:   70ns	0			1						00000000 | 11001100	11001100
-# RUNTIME: Info: RUNTIME_0070 Testbench_wordcell.v (59): $stop called.
-# KERNEL: Time: 80 ps,  Iteration: 0,  Instance: /Testbench_wordcell,  Process: @INITIAL#16_1@.
-# KERNEL: Stopped at time 80 ps + 0.
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
-# Unit top modules: Testbench_memory_unit.
-# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
-# done
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.0 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.3 [s]
-# SLP: Finished : 0.4 [s]
-# SLP: 403 (99.75%) primitives and 1 (0.25%) other processes in SLP
-# SLP: 0 signals in SLP and 650 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.4 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5426 kB (elbread=436 elab2=4854 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  12:35, Tuesday, 12 November 2024
-#  Simulation has been initialized
-run
-# KERNEL: Time			op		sel		adr		in_bus		 | out_bus
-# KERNEL: ---------------------------------------------------
-# KERNEL:    0ns	1			0			000			01010101					 | 00000000
-# KERNEL:   10ns	1			1			000			01010101					 | 00000000
-# KERNEL:   20ns	0			1			000			01010101					 | 0x0x0x0x
-# KERNEL:   30ns	0			0			000			01010101					 | 00000000
-# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (37): $stop called.
-# KERNEL: Time: 40 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#16_1@.
-# KERNEL: Stopped at time 40 ps + 0.
-run
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
-# Unit top modules: Testbench_memory_unit.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.0 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.3 [s]
-# SLP: Finished : 0.4 [s]
-# SLP: 403 (99.75%) primitives and 1 (0.25%) other processes in SLP
-# SLP: 0 signals in SLP and 650 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.4 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5426 kB (elbread=436 elab2=4854 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  12:35, Tuesday, 12 November 2024
-#  Simulation has been initialized
-run
-# KERNEL: Time			op		sel		adr		in_bus		 | out_bus
-# KERNEL: ---------------------------------------------------
-# KERNEL:    0ns	1			0			000					01010101					 | 00000000
-# KERNEL:   10ns	1			1			000					01010101					 | 00000000
-# KERNEL:   20ns	0			1			000					01010101					 | 0x0x0x0x
-# KERNEL:   30ns	0			0			000					01010101					 | 00000000
-# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (37): $stop called.
-# KERNEL: Time: 40 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#16_1@.
-# KERNEL: Stopped at time 40 ps + 0.
-endsim
-# VSIM: Simulation has finished.
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
-# Unit top modules: Testbench_memory_unit.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.0 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.3 [s]
-# SLP: Finished : 0.4 [s]
-# SLP: 403 (99.75%) primitives and 1 (0.25%) other processes in SLP
-# SLP: 0 signals in SLP and 650 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.4 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5426 kB (elbread=436 elab2=4854 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  12:36, Tuesday, 12 November 2024
-#  Simulation has been initialized
-run
-# KERNEL: Time			op		sel		adr		in_bus		 | out_bus
-# KERNEL: ---------------------------------------------------
-# KERNEL:    0ns	1			0					000			01010101					 | 00000000
-# KERNEL:   10ns	1			1					000			01010101					 | 00000000
-# KERNEL:   20ns	0			1					000			01010101					 | 0x0x0x0x
-# KERNEL:   30ns	0			0					000			01010101					 | 00000000
-# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (37): $stop called.
-# KERNEL: Time: 40 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#16_1@.
-# KERNEL: Stopped at time 40 ps + 0.
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
-# Unit top modules: Testbench_memory_unit.
-# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
-# done
-run
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.0 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.3 [s]
-# SLP: Finished : 0.4 [s]
-# SLP: 403 (99.75%) primitives and 1 (0.25%) other processes in SLP
-# SLP: 0 signals in SLP and 650 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.4 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5426 kB (elbread=436 elab2=4854 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  12:36, Tuesday, 12 November 2024
-#  Simulation has been initialized
-run
-# KERNEL: Time			op		sel		adr		in_bus		 | out_bus
-# KERNEL: ---------------------------------------------------
-# KERNEL:    0ns	1			0				000		01010101					 | 00000000
-# KERNEL:   10ns	1			1				000		01010101					 | 00000000
-# KERNEL:   20ns	0			1				000		01010101					 | 0x0x0x0x
-# KERNEL:   30ns	0			0				000		01010101					 | 00000000
-# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (37): $stop called.
-# KERNEL: Time: 40 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#16_1@.
-# KERNEL: Stopped at time 40 ps + 0.
-endsim
-# VSIM: Simulation has finished.
-asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
-# Unit top modules: Testbench_memory_unit.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.0 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.3 [s]
-# SLP: Finished : 0.4 [s]
-# SLP: 403 (99.75%) primitives and 1 (0.25%) other processes in SLP
-# SLP: 0 signals in SLP and 650 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.4 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5426 kB (elbread=436 elab2=4854 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  12:37, Tuesday, 12 November 2024
-#  Simulation has been initialized
-run
-# KERNEL: Time			op		sel		adr		in_bus		 | out_bus
-# KERNEL: ---------------------------------------------------
-# KERNEL:    0ns	1			0				000		01010101	 | 00000000
-# KERNEL:   10ns	1			1				000		01010101	 | 00000000
-# KERNEL:   20ns	0			1				000		01010101	 | 0x0x0x0x
-# KERNEL:   30ns	0			0				000		01010101	 | 00000000
-# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (37): $stop called.
-# KERNEL: Time: 40 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#16_1@.
-# KERNEL: Stopped at time 40 ps + 0.
-endsim
-# VSIM: Simulation has finished.
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
-# Unit top modules: Testbench_memory_unit.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.0 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.3 [s]
-# SLP: Finished : 0.4 [s]
-# SLP: 403 (99.75%) primitives and 1 (0.25%) other processes in SLP
-# SLP: 0 signals in SLP and 650 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.4 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5426 kB (elbread=436 elab2=4854 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  12:37, Tuesday, 12 November 2024
-#  Simulation has been initialized
-run
-# KERNEL: Time			op		sel		adr		in_bus		 | out_bus
-# KERNEL: ---------------------------------------------------
-# KERNEL:    0ns	1			0				000		01010101 | 00000000
-# KERNEL:   10ns	1			1				000		01010101 | 00000000
-# KERNEL:   20ns	0			1				000		01010101 | 0x0x0x0x
-# KERNEL:   30ns	0			0				000		01010101 | 00000000
-# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (37): $stop called.
-# KERNEL: Time: 40 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#16_1@.
-# KERNEL: Stopped at time 40 ps + 0.
-endsim
-# VSIM: Simulation has finished.
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Memory_unit.v
-# Warning: VCP2597 Memory_unit.v : (6, 1): Some unconnected ports remain at instance: ad. Module decoder_3to8 has unconnected  port(s) : Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7, sel_x.
-# Warning: VCP2597 Memory_unit.v : (19, 1): Some unconnected ports remain at instance: wc. Module Wordcell has unconnected  port(s) : stored_data.
-# Compile success 0 Errors 2 Warnings  Analysis time: 0[s].
-# done
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Memory_unit.v
-# Warning: VCP2597 Memory_unit.v : (6, 1): Some unconnected ports remain at instance: ad. Module decoder_3to8 has unconnected  port(s) : Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7, sel_x.
-# Warning: VCP2590 Memory_unit.v : (24, 1): Undefined port stored_value in module Wordcell.
-# Compile success 0 Errors 2 Warnings  Analysis time: 0[s].
-# done
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Memory_unit.v
-# Warning: VCP2597 Memory_unit.v : (6, 1): Some unconnected ports remain at instance: ad. Module decoder_3to8 has unconnected  port(s) : Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7, sel_x.
-# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
-# done
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
-# Unit top modules: Testbench_memory_unit.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.0 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.3 [s]
-# SLP: Finished : 0.4 [s]
-# SLP: 403 (99.75%) primitives and 1 (0.25%) other processes in SLP
-# SLP: 0 signals in SLP and 652 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.4 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5426 kB (elbread=436 elab2=4854 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  12:46, Tuesday, 12 November 2024
-#  Simulation has been initialized
-run
-# KERNEL: Time			op		sel		adr		in_bus		 | out_bus				
-# KERNEL: ---------------------------------------------------
-# KERNEL:    0ns	1			0				000		01010101 | 00000000	xxxxxxxx
-# KERNEL:   10ns	1			1				000		01010101 | 00000000	xxxxxxxx
-# KERNEL:   20ns	0			1				000		01010101 | xxxxxxxx	xxxxxxxx
-# KERNEL:   30ns	0			0				000		01010101 | 00000000	xxxxxxxx
-# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (38): $stop called.
-# KERNEL: Time: 40 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#17_1@.
-# KERNEL: Stopped at time 40 ps + 0.
-endsim
-# VSIM: Simulation has finished.
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
-# Unit top modules: Testbench_memory_unit.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.0 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.3 [s]
-# SLP: Finished : 0.4 [s]
-# SLP: 403 (99.75%) primitives and 1 (0.25%) other processes in SLP
-# SLP: 0 signals in SLP and 652 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.5 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5426 kB (elbread=436 elab2=4855 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  12:46, Tuesday, 12 November 2024
-#  Simulation has been initialized
-run
-# KERNEL: Time			op		sel		adr		in_bus		 | out_bus				stored_value
-# KERNEL: ---------------------------------------------------
-# KERNEL:    0ns	1			0				000		01010101 | 00000000	xxxxxxxx
-# KERNEL:   10ns	1			1				000		01010101 | 00000000	xxxxxxxx
-# KERNEL:   20ns	0			1				000		01010101 | xxxxxxxx	xxxxxxxx
-# KERNEL:   30ns	0			0				000		01010101 | 00000000	xxxxxxxx
-# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (38): $stop called.
-# KERNEL: Time: 40 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#17_1@.
-# KERNEL: Stopped at time 40 ps + 0.
-endsim
-# VSIM: Simulation has finished.
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
-# Unit top modules: Testbench_memory_unit.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.0 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.3 [s]
-# SLP: Finished : 0.4 [s]
-# SLP: 403 (99.75%) primitives and 1 (0.25%) other processes in SLP
-# SLP: 0 signals in SLP and 652 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.4 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5426 kB (elbread=436 elab2=4855 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  12:46, Tuesday, 12 November 2024
-#  Simulation has been initialized
-run
-# KERNEL: Time			op		sel		adr		in_bus		 | out_bus		stored_value
-# KERNEL: ---------------------------------------------------
-# KERNEL:    0ns	1			0				000		01010101 | 00000000	xxxxxxxx
-# KERNEL:   10ns	1			1				000		01010101 | 00000000	xxxxxxxx
-# KERNEL:   20ns	0			1				000		01010101 | xxxxxxxx	xxxxxxxx
-# KERNEL:   30ns	0			0				000		01010101 | 00000000	xxxxxxxx
-# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (38): $stop called.
-# KERNEL: Time: 40 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#17_1@.
-# KERNEL: Stopped at time 40 ps + 0.
-run
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Memory_unit.v $dsn/src/Testbench_memory_unit.v
-# Warning: VCP2597 Memory_unit.v : (6, 1): Some unconnected ports remain at instance: ad. Module decoder_3to8 has unconnected  port(s) : Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7, sel_x.
-# Unit top modules: Testbench_memory_unit.
-# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
-# done
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.0 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.3 [s]
-# SLP: Finished : 0.4 [s]
-# SLP: 403 (99.75%) primitives and 1 (0.25%) other processes in SLP
-# SLP: 0 signals in SLP and 652 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.4 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5426 kB (elbread=436 elab2=4855 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  12:52, Tuesday, 12 November 2024
-#  Simulation has been initialized
-run
-# KERNEL: Time			op		sel		adr		in_bus		 | out_bus		stored_value
-# KERNEL: ---------------------------------------------------
-# KERNEL:    0ns	1			0				000		01010101 | 00000000	xxxxxxxx
-# KERNEL:   10ns	1			1				000		01010101 | 00000000	xxxxxxxx
-# KERNEL:   20ns	0			1				000		01010101 | xxxxxxxx	xxxxxxxx
-# KERNEL:   30ns	0			0				000		01010101 | 00000000	xxxxxxxx
-# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (38): $stop called.
-# KERNEL: Time: 40 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#17_1@.
-# KERNEL: Stopped at time 40 ps + 0.
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Memory_unit.v
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-run
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-endsim
-# VSIM: Simulation has finished.
-asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELBREAD: Error: ELBREAD_0055 Testbench_memory_unit.v (14): Too many port connections. Region: /Testbench_memory_unit/DUT
-# KERNEL: Error: E8005 : Kernel process initialization failed.
-# VSIM: Error: Simulation initialization failed.
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_address_decoder.v
-# Warning: VCP2515 Testbench_address_decoder.v : (67, 7): Undefined module: Decoder_3_to_8 was used. Port connection rules will not be checked at such instantiations.
-# Unit top modules: testbench_decoder.
-# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
-# done
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_address_decoder.v
-# Warning: VCP2515 Testbench_address_decoder.v : (67, 7): Undefined module: Decoder_3_to_8 was used. Port connection rules will not be checked at such instantiations.
-# Error: VCP5103 Testbench_address_decoder.v : (75, 88): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (75, 94): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (75, 100): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (75, 103): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (75, 107): Undeclared identifier: Y0.
-# Error: VCP5103 Testbench_address_decoder.v : (75, 111): Undeclared identifier: Y1.
-# Error: VCP5103 Testbench_address_decoder.v : (75, 115): Undeclared identifier: Y2.
-# Error: VCP5103 Testbench_address_decoder.v : (75, 119): Undeclared identifier: Y3.
-# Error: VCP5103 Testbench_address_decoder.v : (75, 123): Undeclared identifier: Y4.
-# Error: VCP5103 Testbench_address_decoder.v : (75, 127): Undeclared identifier: Y5.
-# Error: VCP5103 Testbench_address_decoder.v : (75, 131): Undeclared identifier: Y6.
-# Error: VCP5103 Testbench_address_decoder.v : (75, 135): Undeclared identifier: Y7.
-# Warning: VCP7126 Testbench_address_decoder.v : (75, 135): Null argument passed with format specifier %b.
-# Warning: VCP7126 Testbench_address_decoder.v : (75, 135): Null argument passed with format specifier %b.
-# Warning: VCP7126 Testbench_address_decoder.v : (75, 135): Null argument passed with format specifier %b.
-# Warning: VCP7126 Testbench_address_decoder.v : (75, 135): Null argument passed with format specifier %b.
-# Warning: VCP7126 Testbench_address_decoder.v : (75, 135): Null argument passed with format specifier %b.
-# Warning: VCP7126 Testbench_address_decoder.v : (75, 135): Null argument passed with format specifier %b.
-# Warning: VCP7126 Testbench_address_decoder.v : (75, 135): Null argument passed with format specifier %b.
-# Warning: VCP7126 Testbench_address_decoder.v : (75, 135): Null argument passed with format specifier %b.
-# Warning: VCP7126 Testbench_address_decoder.v : (75, 135): Null argument passed with format specifier %b.
-# Warning: VCP7126 Testbench_address_decoder.v : (75, 135): Null argument passed with format specifier %b.
-# Warning: VCP7126 Testbench_address_decoder.v : (75, 135): Null argument passed with format specifier %b.
-# Warning: VCP7126 Testbench_address_decoder.v : (75, 135): Null argument passed with format specifier %b.
-# Error: VCP5103 Testbench_address_decoder.v : (77, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (77, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (77, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (77, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (78, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (78, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (78, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (78, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (79, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (79, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (79, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (79, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (80, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (80, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (80, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (80, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (81, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (81, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (81, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (81, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (82, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (82, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (82, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (82, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (83, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (83, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (83, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (83, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (84, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (84, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (84, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (84, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (87, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (87, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (87, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (87, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (88, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (88, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (88, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (88, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (89, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (89, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (89, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (89, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (90, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (90, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (90, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (90, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (91, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (91, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (91, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (91, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (92, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (92, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (92, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (92, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (93, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (93, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (93, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (93, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (94, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (94, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (94, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (94, 34): Undeclared identifier: E.
-# Compile failure 76 Errors 13 Warnings  Analysis time: 0[s].
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_address_decoder.v
-# Warning: VCP2515 Testbench_address_decoder.v : (67, 7): Undefined module: Decoder_3_to_8 was used. Port connection rules will not be checked at such instantiations.
-# Error: VCP5103 Testbench_address_decoder.v : (77, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (77, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (77, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (77, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (78, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (78, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (78, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (78, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (79, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (79, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (79, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (79, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (80, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (80, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (80, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (80, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (81, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (81, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (81, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (81, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (82, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (82, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (82, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (82, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (83, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (83, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (83, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (83, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (84, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (84, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (84, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (84, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (87, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (87, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (87, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (87, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (88, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (88, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (88, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (88, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (89, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (89, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (89, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (89, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (90, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (90, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (90, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (90, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (91, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (91, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (91, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (91, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (92, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (92, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (92, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (92, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (93, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (93, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (93, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (93, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (94, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (94, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (94, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (94, 34): Undeclared identifier: E.
-# Compile failure 64 Errors 1 Warnings  Analysis time: 0[s].
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_address_decoder.v
-# Warning: VCP2515 Testbench_address_decoder.v : (67, 7): Undefined module: Decoder_3_to_8 was used. Port connection rules will not be checked at such instantiations.
-# Error: VCP5103 Testbench_address_decoder.v : (80, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (80, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (80, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (80, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (81, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (81, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (81, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (81, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (82, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (82, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (82, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (82, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (83, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (83, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (83, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (83, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (84, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (84, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (84, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (84, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (85, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (85, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (85, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (85, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (86, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (86, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (86, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (86, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (87, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (87, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (87, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (87, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (90, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (90, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (90, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (90, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (91, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (91, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (91, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (91, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (92, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (92, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (92, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (92, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (93, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (93, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (93, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (93, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (94, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (94, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (94, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (94, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (95, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (95, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (95, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (95, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (96, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (96, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (96, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (96, 34): Undeclared identifier: E.
-# Error: VCP5103 Testbench_address_decoder.v : (97, 13): Undeclared identifier: adr0.
-# Error: VCP5103 Testbench_address_decoder.v : (97, 21): Undeclared identifier: adr1.
-# Error: VCP5103 Testbench_address_decoder.v : (97, 29): Undeclared identifier: adr2.
-# Error: VCP5103 Testbench_address_decoder.v : (97, 34): Undeclared identifier: E.
-# Compile failure 64 Errors 1 Warnings  Analysis time: 0[s].
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_address_decoder.v
-# Warning: VCP2515 Testbench_address_decoder.v : (67, 7): Undefined module: Decoder_3_to_8 was used. Port connection rules will not be checked at such instantiations.
-# Unit top modules: testbench_decoder.
-# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
-# done
-# ELBREAD: Elaboration process.
-# ELBREAD: Error: ELBREAD_0081 Testbench_address_decoder.v (61): Design unit Decoder_3_to_8 instantiated in bitcell_nand_latch.testbench_decoder not found in searched libraries: bitcell_nand_latch, Bitcell_NAND_Latch.
-# ELBREAD: Error: Elaboration process completed with errors.
-# Design: Error: Elaboration failed
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_address_decoder.v
-# Warning: VCP2515 Testbench_address_decoder.v : (67, 7): Undefined module: decoder_3_to_8 was used. Port connection rules will not be checked at such instantiations.
-# Unit top modules: testbench_decoder.
-# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
-# done
-# ELBREAD: Elaboration process.
-# ELBREAD: Error: ELBREAD_0081 Testbench_address_decoder.v (61): Design unit decoder_3_to_8 instantiated in bitcell_nand_latch.testbench_decoder not found in searched libraries: bitcell_nand_latch, Bitcell_NAND_Latch.
-# ELBREAD: Error: Elaboration process completed with errors.
-# Design: Error: Elaboration failed
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Address_decoder.v
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r decoder_3to8
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.0 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.3 [s]
-# SLP: Finished : 0.4 [s]
-# SLP: 19 (100.00%) primitives and 0 other processes in SLP
-# SLP: 0 signals in SLP and 16 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.4 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5368 kB (elbread=427 elab2=4807 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  13:15, Tuesday, 12 November 2024
-#  Simulation has been initialized
-run
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-endsim
-# VSIM: Simulation has finished.
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
-# Error: VCP5103 Testbench_memory_unit.v : (23, 87): Undeclared identifier: address.
-# Warning: VCP7126 Testbench_memory_unit.v : (23, 118): Null argument passed with format specifier %b.
-# Error: VCP5103 Testbench_memory_unit.v : (28, 33): Undeclared identifier: address.
-# Error: VCP5103 Testbench_memory_unit.v : (31, 33): Undeclared identifier: address.
-# Error: VCP5103 Testbench_memory_unit.v : (33, 33): Undeclared identifier: address.
-# Error: VCP5103 Testbench_memory_unit.v : (35, 33): Undeclared identifier: address.
-# Compile failure 5 Errors 1 Warnings  Analysis time: 0[s].
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELBREAD: Error: ELBREAD_0055 Testbench_memory_unit.v (14): Too many port connections. Region: /Testbench_memory_unit/DUT
-# KERNEL: Error: E8005 : Kernel process initialization failed.
-# VSIM: Error: Simulation initialization failed.
-# ELBREAD: Elaboration process.
-# ELBREAD: Error: ELBREAD_0081 Testbench_address_decoder.v (61): Design unit decoder_3_to_8 instantiated in bitcell_nand_latch.testbench_decoder not found in searched libraries: bitcell_nand_latch, Bitcell_NAND_Latch.
-# ELBREAD: Error: Elaboration process completed with errors.
-# Design: Error: Elaboration failed
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_address_decoder.v
-# Warning: VCP2597 Testbench_address_decoder.v : (61, 1): Some unconnected ports remain at instance: DUT. Module decoder_3to8 has unconnected  port(s) : Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7.
-# Unit top modules: testbench_decoder.
-# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
-# done
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r testbench_decoder
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.0 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.3 [s]
-# SLP: Finished : 0.4 [s]
-# SLP: 19 (95.00%) primitives and 1 (5.00%) other processes in SLP
-# SLP: 0 signals in SLP and 19 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.4 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5375 kB (elbread=427 elab2=4813 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  13:16, Tuesday, 12 November 2024
-#  Simulation has been initialized
-run
-# KERNEL: Time	 address select | sel_x
+# KERNEL: Time	 r_w sel inp | out stored_value
 # KERNEL: -----------------------------
-# KERNEL:    0ns	 000   0 |  00000000
-# KERNEL:   10ns	 001   0 |  00000000
-# KERNEL:   20ns	 010   0 |  00000000
-# KERNEL:   30ns	 011   0 |  00000000
-# KERNEL:   40ns	 100   0 |  00000000
-# KERNEL:   50ns	 101   0 |  00000000
-# KERNEL:   60ns	 110   0 |  00000000
-# KERNEL:   70ns	 111   0 |  00000000
-# KERNEL:   80ns	 000   1 |  00000001
-# KERNEL:   90ns	 001   1 |  00010000
-# KERNEL:  100ns	 010   1 |  00000100
-# KERNEL:  110ns	 011   1 |  01000000
-# KERNEL:  120ns	 100   1 |  00000010
-# KERNEL:  130ns	 101   1 |  00100000
-# KERNEL:  140ns	 110   1 |  00001000
-# KERNEL:  150ns	 111   1 |  10000000
-# RUNTIME: Info: RUNTIME_0070 Testbench_address_decoder.v (95): $stop called.
-# KERNEL: Time: 160 ps,  Iteration: 0,  Instance: /testbench_decoder,  Process: @INITIAL#69_1@.
-# KERNEL: Stopped at time 160 ps + 0.
-run
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_address_decoder.v
-# Warning: VCP2597 Testbench_address_decoder.v : (61, 1): Some unconnected ports remain at instance: DUT. Module decoder_3to8 has unconnected  port(s) : Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7.
-# Unit top modules: testbench_decoder.
-# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
-# done
+# KERNEL:    0ns	 1   0   0  |  0  x
+# KERNEL:   10ns	 0   0   0  |  0  x
+# KERNEL:   20ns	 1   0   1  |  0  x
+# KERNEL:   30ns	 0   0   1  |  0  x
+# KERNEL:   40ns	 1   1   0  |  0  0
+# KERNEL:   50ns	 0   1   0  |  0  0
+# KERNEL:   60ns	 0   1   1  |  0  0
+# KERNEL:   70ns	 1   1   1  |  0  1
+# KERNEL:   80ns	 0   1   1  |  1  1
+# KERNEL:   90ns	 0   1   0  |  1  1
+# RUNTIME: Info: RUNTIME_0070 Testbench_bitcell.v (66): $stop called.
+# KERNEL: Time: 100 ps,  Iteration: 0,  Instance: /testbench_bitcell,  Process: @INITIAL#15_1@.
+# KERNEL: Stopped at time 100 ps + 0.
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.0 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.3 [s]
-# SLP: Finished : 0.3 [s]
-# SLP: 19 (95.00%) primitives and 1 (5.00%) other processes in SLP
-# SLP: 0 signals in SLP and 19 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.3 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5375 kB (elbread=427 elab2=4813 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  13:18, Tuesday, 12 November 2024
-#  Simulation has been initialized
-run
-# KERNEL: Time	 address select | sel_x
-# KERNEL: -----------------------------
-# KERNEL:    0ns	 000   0 |  00000000
-# KERNEL:   10ns	 001   0 |  00000000
-# KERNEL:   20ns	 010   0 |  00000000
-# KERNEL:   30ns	 011   0 |  00000000
-# KERNEL:   40ns	 100   0 |  00000000
-# KERNEL:   50ns	 101   0 |  00000000
-# KERNEL:   60ns	 110   0 |  00000000
-# KERNEL:   70ns	 111   0 |  00000000
-# KERNEL:   80ns	 000   1 |  00000001
-# KERNEL:   90ns	 100   1 |  00000010
-# KERNEL:  100ns	 010   1 |  00000100
-# KERNEL:  110ns	 110   1 |  00001000
-# KERNEL:  120ns	 001   1 |  00010000
-# KERNEL:  130ns	 101   1 |  00100000
-# KERNEL:  140ns	 011   1 |  01000000
-# KERNEL:  150ns	 111   1 |  10000000
-# RUNTIME: Info: RUNTIME_0070 Testbench_address_decoder.v (95): $stop called.
-# KERNEL: Time: 160 ps,  Iteration: 0,  Instance: /testbench_decoder,  Process: @INITIAL#69_1@.
-# KERNEL: Stopped at time 160 ps + 0.
-run
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_address_decoder.v
-# Warning: VCP2597 Testbench_address_decoder.v : (61, 1): Some unconnected ports remain at instance: DUT. Module decoder_3to8 has unconnected  port(s) : Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7.
-# Unit top modules: testbench_decoder.
-# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
-# done
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... done : 0.0 [s]
-# SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.3 [s]
-# SLP: Finished : 0.4 [s]
-# SLP: 19 (95.00%) primitives and 1 (5.00%) other processes in SLP
-# SLP: 0 signals in SLP and 19 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.4 [s].
-# KERNEL: SLP loading done - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: SLP simulation initialization done - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5375 kB (elbread=427 elab2=4813 kernel=134 sdf=0)
-# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  13:19, Tuesday, 12 November 2024
-#  Simulation has been initialized
-run
-# KERNEL: Time	 address select | sel_x
-# KERNEL: -----------------------------
-# KERNEL:    0ns	 000   0 |  00000000
-# KERNEL:   10ns	 100   0 |  00000000
-# KERNEL:   20ns	 010   0 |  00000000
-# KERNEL:   30ns	 110   0 |  00000000
-# KERNEL:   40ns	 001   0 |  00000000
-# KERNEL:   50ns	 101   0 |  00000000
-# KERNEL:   60ns	 011   0 |  00000000
-# KERNEL:   70ns	 111   0 |  00000000
-# KERNEL:   80ns	 000   1 |  00000001
-# KERNEL:   90ns	 100   1 |  00000010
-# KERNEL:  100ns	 010   1 |  00000100
-# KERNEL:  110ns	 110   1 |  00001000
-# KERNEL:  120ns	 001   1 |  00010000
-# KERNEL:  130ns	 101   1 |  00100000
-# KERNEL:  140ns	 011   1 |  01000000
-# KERNEL:  150ns	 111   1 |  10000000
-# RUNTIME: Info: RUNTIME_0070 Testbench_address_decoder.v (95): $stop called.
-# KERNEL: Time: 160 ps,  Iteration: 0,  Instance: /testbench_decoder,  Process: @INITIAL#69_1@.
-# KERNEL: Stopped at time 160 ps + 0.
-endsim
-# VSIM: Simulation has finished.
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_address_decoder.v
-# Warning: VCP2597 Testbench_address_decoder.v : (10, 1): Some unconnected ports remain at instance: DUT. Module decoder_3to8 has unconnected  port(s) : Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7.
-# Unit top modules: testbench_decoder.
-# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
-# done
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Address_decoder.v
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
 alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_address_decoder.v
 # Unit top modules: testbench_decoder.
 # Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
@@ -1174,11 +74,11 @@ asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r testbench_decod
 # SLP: Elaboration phase ...
 # SLP: Elaboration phase ... done : 0.0 [s]
 # SLP: Generation phase ...
-# SLP: Generation phase ... done : 0.3 [s]
-# SLP: Finished : 0.4 [s]
+# SLP: Generation phase ... done : 0.2 [s]
+# SLP: Finished : 0.2 [s]
 # SLP: 11 (91.67%) primitives and 1 (8.33%) other processes in SLP
 # SLP: 0 signals in SLP and 11 (100.00%) interface signals
-# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
 # KERNEL: SLP loading done - time: 0.0 [s].
 # KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
@@ -1186,7 +86,7 @@ asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r testbench_decod
 # KERNEL: Kernel process initialization done.
 # Allocation: Simulator allocated 5374 kB (elbread=427 elab2=4813 kernel=134 sdf=0)
 # KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
-#  14:39, Tuesday, 12 November 2024
+#  15:41, Tuesday, 12 November 2024
 #  Simulation has been initialized
 run
 # KERNEL: Time	 address select | sel_x
@@ -1210,17 +110,17 @@ run
 # RUNTIME: Info: RUNTIME_0070 Testbench_address_decoder.v (44): $stop called.
 # KERNEL: Time: 160 ps,  Iteration: 0,  Instance: /testbench_decoder,  Process: @INITIAL#18_1@.
 # KERNEL: Stopped at time 160 ps + 0.
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Address_decoder.v
-# Unit top modules: address_decoder.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-run
-alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_address_decoder.v
-# Unit top modules: testbench_decoder.
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_wordcell.v
+# Unit top modules: Testbench_wordcell.
 # Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
 # done
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
+asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_wordcell
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
 # 
 # KERNEL: Main thread initiated.
 # KERNEL: Kernel process initialization phase.
@@ -1233,7 +133,84 @@ alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_address
 # SLP: Elaboration phase ... done : 0.0 [s]
 # SLP: Generation phase ...
 # SLP: Generation phase ... done : 0.2 [s]
-# SLP: Finished : 0.3 [s]
-# SLP: 11 (91.67%) primitives and 1 (8.33%) other processes in SLP
-# SLP: 0 signals in SLP and 11 (100.00%) interface signals
-# ELAB2
+# SLP: Finished : 0.2 [s]
+# SLP: 48 (97.96%) primitives and 1 (2.04%) other processes in SLP
+# SLP: 0 signals in SLP and 82 (100.00%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5380 kB (elbread=428 elab2=4818 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
+#  15:42, Tuesday, 12 November 2024
+#  Simulation has been initialized
+run
+# KERNEL: Time			op		sel_x		in_bus		 | out_bus		stored_value
+# KERNEL: ---------------------------------------------------
+# KERNEL:    0ns	1			0						01010101 | 00000000	xxxxxxxx
+# KERNEL:   10ns	0			0						01010101 | 00000000	xxxxxxxx
+# KERNEL:   20ns	0			1						01010101 | xxxxxxxx	xxxxxxxx
+# KERNEL:   30ns	1			1						01010101 | 00000000	01010101
+# KERNEL:   40ns	0			1						00000000 | 01010101	01010101
+# KERNEL:   50ns	0			0						00000000 | 00000000	01010101
+# KERNEL:   60ns	1			1						11001100 | 00000000	11001100
+# KERNEL:   70ns	0			1						00000000 | 11001100	11001100
+# RUNTIME: Info: RUNTIME_0070 Testbench_wordcell.v (59): $stop called.
+# KERNEL: Time: 80 ps,  Iteration: 0,  Instance: /Testbench_wordcell,  Process: @INITIAL#16_1@.
+# KERNEL: Stopped at time 80 ps + 0.
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Testbench_memory_unit.v
+# Unit top modules: Testbench_memory_unit.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve -msg 5 -sv2k17 -work Bitcell_NAND_Latch $dsn/src/Bitcell_NAND.v $dsn/src/Testbench_bitcell.v $dsn/src/Wordcell.v $dsn/src/Testbench_wordcell.v $dsn/src/Memory_unit.v $dsn/src/Address_decoder.v $dsn/src/Testbench_address_decoder.v $dsn/src/Testbench_memory_unit.v
+# Unit top modules: testbench_bitcell Testbench_wordcell testbench_decoder Testbench_memory_unit.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -O5 +access +w_nets +ml +w_nets +inv +accb +accr +access +r Testbench_memory_unit
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.2 [s]
+# SLP: Finished : 0.2 [s]
+# SLP: 395 (99.75%) primitives and 1 (0.25%) other processes in SLP
+# SLP: 0 signals in SLP and 637 (100.00%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5425 kB (elbread=436 elab2=4854 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\dev\DIC_SRAM\Integrated_circuits\Verilog\Bitcell_NAND_Latch\Bitcell_NAND_Latch\Bitcell_NAND_Latch\src\wave.asdb
+#  15:43, Tuesday, 12 November 2024
+#  Simulation has been initialized
+run
+# KERNEL: Time			op		sel		adr		in_bus		 | out_bus		stored_value
+# KERNEL: ---------------------------------------------------
+# KERNEL:    0ns	1				0			000		01010101 | 00000000	xxxxxxxx
+# KERNEL:   10ns	1				1			000		01010101 | 00000000	xxxxxxxx
+# KERNEL:   20ns	0				1			000		01010101 | xxxxxxxx	xxxxxxxx
+# KERNEL:   30ns	0				0			000		01010101 | 00000000	xxxxxxxx
+# RUNTIME: Info: RUNTIME_0070 Testbench_memory_unit.v (31): $stop called.
+# KERNEL: Time: 40 ps,  Iteration: 0,  Instance: /Testbench_memory_unit,  Process: @INITIAL#17_1@.
+# KERNEL: Stopped at time 40 ps + 0.
+endsim
+# VSIM: Simulation has finished.

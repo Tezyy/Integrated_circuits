@@ -3,12 +3,12 @@
 module Testbench_memory_unit ();
 
 	// creating logic signals
-	logic op;  
-	logic sel;
-	logic [2:0] address;
-	logic [7:0] in_bus;
-	logic [7:0] out_bus;
-	logic [7:0] stored_value;
+	reg op;  
+	reg sel;
+	reg [2:0] address;
+	reg [7:0] in_bus;
+	wire [7:0] out_bus;
+	wire [7:0] stored_value;
 	
 	// Initiate the DUT
 	Memory_unit DUT (op, sel, address, in_bus, out_bus, stored_value);	

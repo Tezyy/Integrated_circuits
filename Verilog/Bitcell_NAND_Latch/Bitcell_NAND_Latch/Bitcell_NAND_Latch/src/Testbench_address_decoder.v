@@ -2,9 +2,9 @@
 
 module testbench_decoder;
  
-	logic select;
-	logic [2:0] address;
-	logic [7:0] sel_x;
+	reg select;
+	reg [2:0] address;
+	wire [7:0] sel_x;
 	
 	
     address_decoder DUT(

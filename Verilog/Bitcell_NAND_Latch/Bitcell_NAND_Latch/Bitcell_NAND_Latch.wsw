@@ -12,5 +12,14 @@ TemplateId=2
 tab=lu
 [OPENDOC|Aldec.Hde.HdePlugIn.7|.\Bitcell_NAND_Latch\src/Testbench_address_decoder.v|]
 TemplateId=2
+tab=lu
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\Bitcell_NAND_Latch\src/Testbench_bitcell.v|]
+TemplateId=2
+tab=lu
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\Bitcell_NAND_Latch\src/Testbench_wordcell.v|]
+TemplateId=2
+tab=lu
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\Bitcell_NAND_Latch\src/Testbench_memory_unit.v|]
+TemplateId=2
 ActiveDocument=1
 tab=lu
