@@ -5,3 +5,4 @@ i<>.\src\Testbench_wordcell.v
 i<>.\src\Memory_unit.v
 i<>.\src\Address_decoder.v
 i<>.\src\Testbench_address_decoder.v
+i<>.\src\Testbench_memory_unit.v

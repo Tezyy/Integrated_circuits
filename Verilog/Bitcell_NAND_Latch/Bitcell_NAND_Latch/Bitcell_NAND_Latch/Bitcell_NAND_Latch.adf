@@ -28,6 +28,7 @@ UCF=
 /Memory_unit.v=-1
 /Address_decoder.v=-1
 /Testbench_address_decoder.v=-1
+/Testbench_memory_unit.v=-1
 [Files.Data]
 .\src\Bitcell_NAND.v=Verilog Source Code
 .\src\Testbench_bitcell.v=Verilog Source Code
@@ -36,6 +37,7 @@ UCF=
 .\src\Memory_unit.v=Verilog Source Code
 .\src\Address_decoder.v=Verilog Source Code
 .\src\Testbench_address_decoder.v=Verilog Source Code
+.\src\Testbench_memory_unit.v=Verilog Source Code
 [HierarchyViewer]
 HierarchyInformation=
 ShowHide=ShowTopLevel
