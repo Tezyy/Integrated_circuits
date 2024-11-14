@@ -1,6 +1,7 @@
 `timescale 1ps / 1ps
 
-module Bitcell_NAND (input in, input sel, input r_w, output out, output stored_value);
+module Bitcell_NAND (input in, input sel, input r_w, 
+output out, output stored_value);
 
 	// Intermediate signals
 	wire nand1_out;

@@ -1,6 +1,13 @@
 `timescale 1ps / 1ps
 
-module Memory_unit (input op, input select, input [2:0] address, input [7:0] in_bus, output [7:0] out_bus, output [7:0] stored_value[7:0]);
+module Memory_unit (
+input op, 
+input select, 
+input [2:0] address, 
+input [7:0] in_bus, 
+output [7:0] out_bus
+//output [7:0] stored_value
+);
 	
 	// Set up intermediate lines
 	wire [7:0] sel_x;
@@ -8,9 +15,7 @@ module Memory_unit (input op, input select, input [2:0] address, input [7:0] in_
 	// CALL ADDRESS DECODER
 	address_decoder ad (
 		.select(select),
-		.adr0(address[0]),
-		.adr1(address[1]),
-		.adr2(address[2]),
+		.adr(address),
 		.sel_x(sel_x)
 	);	  		
 
@@ -25,7 +30,7 @@ module Memory_unit (input op, input select, input [2:0] address, input [7:0] in_
 				.sel_x(sel_x[j]),
 				.in_bus(in_bus),
 				.out_bus(out_bus),
-				.stored_data(stored_value[j])
+				.stored_data(out_bus)
             );
         end
     endgenerate
