@@ -1,5 +1,6 @@
-`timescale 1ps / 1ps
-
+//`timescale 1ps / 1ps
+//`include "Memory_unit"
+`include "..\src\Memory_unit.v"
 module Testbench_memory_unit ();
 
 	// creating logic signals
@@ -8,7 +9,7 @@ module Testbench_memory_unit ();
 	reg [2:0] address;
 	reg [7:0] in_bus;
 	wire [7:0] out_bus;
-	//wire [7:0] stored_value[7:0];
+	wire [7:0] stored_data;
 	
 	// Initiate the DUT
 	Memory_unit DUT (
@@ -16,8 +17,8 @@ module Testbench_memory_unit ();
 		.select(sel), 
 		.address(address), 
 		.in_bus(in_bus), 
-		.out_bus(out_bus)
-		//.stored_value(stored_value)
+		.out_bus(out_bus),
+		.stored_data(stored_data)
 	);	
 	
 	//Test cases

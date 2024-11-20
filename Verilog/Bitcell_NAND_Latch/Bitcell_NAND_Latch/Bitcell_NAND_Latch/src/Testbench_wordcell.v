@@ -1,4 +1,4 @@
-`timescale 1ps / 1ps
+//`timescale 1ps / 1ps
 
 module Testbench_wordcell ();
 
@@ -10,7 +10,7 @@ module Testbench_wordcell ();
 	wire [7:0] stored_value;
 	
 	// Initiate the DUT
-	Wordcell DUT (.op(op), .sel_x(sel_x), .in_bus(in_bus), .out_bus(out_bus), .stored_value(stored_value));
+	Wordcell DUT (op, sel_x, in_bus, out_bus, stored_value);
 	
 	//Test cases
 	initial begin
