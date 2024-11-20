@@ -73,9 +73,9 @@ xmn2 out1 in2 gnd gnd nmos1v L=L1 W=W1
 * 0.4 < Vdd < 1
 .param Vdd=1
 .param L1=100n
-.param W1=300n
+.param W1=600n
 .param Lpmos=100n
-.param Wpmos=750n
+.param Wpmos=1500n
 
 
 
