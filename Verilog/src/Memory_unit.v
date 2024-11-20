@@ -1,0 +1,91 @@
+`timescale 1ps / 1ps
+
+module Memory_unit (input op, input select, input [2:0] address, input [7:0] in_bus, output [7:0] out_bus, output [7:0] stored_value[7:0]);
+	
+	// Set up intermediate lines
+	wire [7:0] sel_x;
+	
+	// CALL ADDRESS DECODER
+	address_decoder ad (
+		.select(select),
+		.adr0(address[0]),
+		.adr1(address[1]),
+		.adr2(address[2]),
+		.sel_x(sel_x)
+	);	  		
+
+	
+	// Initiate 8 Wordcells
+	genvar j;
+	
+	generate	
+    	for (j = 0; j < 8; j = j + 1) begin : wordcell_array
+			Wordcell wc (
+				.op(op),
+				.sel_x(sel_x[j]),
+				.in_bus(in_bus),
+				.out_bus(out_bus),
+				.stored_data(stored_value[j])
+            );
+        end
+    endgenerate
+
+endmodule
+
+
+module Testbench_memory_unit ();
+
+	// creating logic signals
+	reg op;  
+	reg sel;
+	reg [2:0] address;
+	reg [7:0] in_bus;
+	wire [7:0] out_bus;
+	wire [7:0] stored_value[7:0];
+	
+	// Initiate the DUT
+	Memory_unit DUT (
+		.op(op), 
+		.select(sel), 
+		.address(address), 
+		.in_bus(in_bus), 
+		.out_bus(out_bus),
+		.stored_value(stored_value)
+	);	
+	
+	//Test cases
+	initial begin
+        // Display the header for the simulation results
+        $display("Time\t\t\top\t\tsel\t\tadr\t\tin_bus\t\t | out_bus\t\twc0\t\t\t\t\t\t\twc1\t\t\t\t\t\twc2\t\t\t\t\t\twc3\t\t\t\t\t\twc4\t\t\t\t\t\twc5\t\t\t\t\t\twc6\t\t\t\t\t\twc7");
+        $display("------------------------------------------------------------------------------------------------------------------");
+        
+        // Monitor signal changes and print them during simulation
+        $monitor("%4dns\t%b\t\t\t\t%b\t\t\t%b\t\t%b | %b\t%b\t\t%b\t%b\t%b\t%b\t%b\t%b\t%b", $time, op, sel, address, in_bus, out_bus, 
+		stored_value[0], stored_value[1], stored_value[2], stored_value[3],
+		stored_value[4], stored_value[5], stored_value[6], stored_value[7]);
+        
+        // Flash 0 to all cells to make it defined
+		op=1; sel=1; in_bus=8'b00000000; address=3'b000; #10;
+		op=1; sel=1; in_bus=8'b00000000; address=3'b100; #10;
+		op=1; sel=1; in_bus=8'b00000000; address=3'b010; #10;
+		op=1; sel=1; in_bus=8'b00000000; address=3'b110; #10;
+		op=1; sel=1; in_bus=8'b00000000; address=3'b001; #10;
+		op=1; sel=1; in_bus=8'b00000000; address=3'b101; #10;
+		op=1; sel=1; in_bus=8'b00000000; address=3'b011; #10;
+		op=1; sel=1; in_bus=8'b00000000; address=3'b111; #10;
+		
+		
+		// Apply different input combinations	   		
+		op=1; sel=0; in_bus=8'b01010101; address=3'b000; #10;
+		op=1; sel=1; in_bus=8'b01010101; address=3'b000; #10;
+		op=0; sel=1; in_bus=8'b01010101; address=3'b000; #10;
+		op=0; sel=0; in_bus=8'b01010101; address=3'b000; #10; 
+		op=0; sel=1; in_bus=8'b00000000; address=3'b100; #10; 
+		op=1; sel=1; in_bus=8'b11110000; address=3'b100; #10;
+		op=0; sel=1; in_bus=8'b00000000; address=3'b100; #10; 
+		
+		
+		$stop; 
+	end
+	
+endmodule
