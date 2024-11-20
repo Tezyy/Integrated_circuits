@@ -10,6 +10,8 @@ module comb_Logic(input A, B, op, select, output D_A, D_B, rw, valid);
 	reg not_sel;
 	reg not_A_and_not_B;
 	
+	
+	
 	// D_A
 	or (A_or_B, A, B);
 	nand (op_nand_sel, op, select);
@@ -60,7 +62,7 @@ endmodule
 
 
 
-module FSM(input op, select, clk, output valid, rw);
+module FSM(input op, select, clk, output valid, rw, A, B);
 	
 	comb_Logic cl (A, B, op, select, D_A, D_B, rw, valid);
 	memory_elements me (D_A, D_B, clk, A, B);
