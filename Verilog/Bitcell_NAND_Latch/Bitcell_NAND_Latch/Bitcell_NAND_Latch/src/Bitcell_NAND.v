@@ -7,7 +7,9 @@ module Bitcell_NAND (input in, input sel, input r_w, output out, output stored_v
 	wire nand2_out;
 
 	wire latch_nand2_out;
-	wire not_r_w;
+	wire not_r_w; 
+	
+	wire low_impedance_output;
 	
 	
 	// NAND1: in & sel & r_w = nand1_out  
@@ -26,6 +28,9 @@ module Bitcell_NAND (input in, input sel, input r_w, output out, output stored_v
 	not U5 (not_r_w, r_w);
 	
 	// AND: sel & not_r_w & latch_nand1_out = out
-	and U6 (out, sel, not_r_w, stored_value);
+	and U6 (low_impedance_output, sel, not_r_w, stored_value);	
+	
+	// Tristate buffer for output
+	bufif1 U7 (out, low_impedance_output, sel);
 
 endmodule
