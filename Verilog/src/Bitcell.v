@@ -45,12 +45,12 @@ module testbench_bitcell;
 	wire stored_value;
 
     // Instantiate the DUT (Device Under Test)
-    Bitcell_NAND DUT (in, sel, rw, out, stored_value);
+    Bitcell DUT (in, sel, rw, out, stored_value);
 
     // Test cases
     initial begin
         // Display the header for the simulation results
-        $display("Time\t rw sel inp | out stored_value");
+        $display("  Time\t rw sel in  | out stored_value");
         $display("-----------------------------");
         
         // Monitor signal changes and print them during simulation

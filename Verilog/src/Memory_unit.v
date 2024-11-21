@@ -1,7 +1,7 @@
 `timescale 1ps / 1ps
 
-module Memory_unit (input op, select, [2:0] adr, [7:0] in, clk, output [7:0] out, valid, rw, A, B);
-   
+module Memory_unit_no_FSM (input rw, input valid, input [2:0] address, input [7:0] in_bus, output [7:0] out_bus, output [7:0] stored_value[7:0]);
+	
 	// Set up intermediate lines
 	wire [7:0] sel_x;
 	
@@ -14,6 +14,7 @@ module Memory_unit (input op, select, [2:0] adr, [7:0] in, clk, output [7:0] out
 		.sel_x(sel_x)
 	);	  		
 
+	
 	// Initiate 8 Wordcells
 	genvar j;
 	
@@ -23,10 +24,25 @@ module Memory_unit (input op, select, [2:0] adr, [7:0] in, clk, output [7:0] out
 				.rw(rw),
 				.sel_x(sel_x[j]),
 				.in_bus(in_bus),
-				.out_bus(out_bus)
+				.out_bus(out_bus),
+				.stored_data(stored_value[j])
             );
         end
-    endgenerate	
+    endgenerate
+
+endmodule
+
+
+module Memory_unit (input op, select, [2:0] adr, [7:0] in, clk, output [7:0] out, valid, rw, A, B);
+   
+	// Call Memory Unit	
+	Memory_unit_no_FSM mu (
+		.rw(rw), 
+		.valid(valid), 
+		.address(adr), 
+		.in_bus(in), 
+		.out_bus(out)
+	);	
 	
 	// Call FSM
 	FSM fsm (
@@ -55,7 +71,7 @@ module Testbench_memory_unit ();
 	wire B;
 	wire [7:0] out;
 	
-	Memory_unit(
+	Memory_unit mu(
 		.op(op), 
 		.select(select), 
 		.adr(adr), 

@@ -10,8 +10,6 @@ module comb_Logic(input A, B, op, select, output D_A, D_B, rw, valid);
 	reg not_sel;
 	reg not_A_and_not_B;
 	
-	
-	
 	// D_A
 	or (A_or_B, A, B);
 	nand (op_nand_sel, op, select);

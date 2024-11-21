@@ -7,7 +7,7 @@ module Wordcell (input rw, input sel_x, input [7:0] in_bus, output [7:0] out_bus
 	
 	generate	
     	for (i = 0; i < 8; i = i + 1) begin : bitcell_array
-			Bitcell_NAND bc (
+			Bitcell bc (
 				.in(in_bus[i]),
                 .out(out_bus[i]),
                 .rw(rw),
