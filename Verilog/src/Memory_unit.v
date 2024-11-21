@@ -1,15 +1,32 @@
 `timescale 1ps / 1ps
 
-module SRAM_with_FSM (input op, select, [2:0] adr, [7:0] in, clk, output [7:0] out, valid, rw, A, B);
+module Memory_unit (input op, select, [2:0] adr, [7:0] in, clk, output [7:0] out, valid, rw, A, B);
    
-	// Call Memory Unit	
-	Memory_unit SRAM (
-		.op(rw), 
-		.select(valid), 
-		.address(adr), 
-		.in_bus(in), 
-		.out_bus(out)
-	);	
+	// Set up intermediate lines
+	wire [7:0] sel_x;
+	
+	// CALL ADDRESS DECODER
+	address_decoder ad (
+		.valid(valid),
+		.adr0(address[0]),
+		.adr1(address[1]),
+		.adr2(address[2]),
+		.sel_x(sel_x)
+	);	  		
+
+	// Initiate 8 Wordcells
+	genvar j;
+	
+	generate	
+    	for (j = 0; j < 8; j = j + 1) begin : wordcell_array
+			Wordcell wc (
+				.rw(rw),
+				.sel_x(sel_x[j]),
+				.in_bus(in_bus),
+				.out_bus(out_bus)
+            );
+        end
+    endgenerate	
 	
 	// Call FSM
 	FSM fsm (
@@ -25,7 +42,7 @@ module SRAM_with_FSM (input op, select, [2:0] adr, [7:0] in, clk, output [7:0] o
 endmodule
 
 
-module Testbench_SRAM_with_FSM ();
+module Testbench_memory_unit ();
 
 	reg op;
 	reg select;
@@ -38,7 +55,7 @@ module Testbench_SRAM_with_FSM ();
 	wire B;
 	wire [7:0] out;
 	
-	SRAM_with_FSM DUT(
+	Memory_unit(
 		.op(op), 
 		.select(select), 
 		.adr(adr), 
