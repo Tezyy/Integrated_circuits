@@ -52,8 +52,6 @@ module testbench_bitcell;
 		
 		// Test case 8: write a 1, stored_value should be 1
         r_w = 1; sel = 1; in = 1;
-        #10;	  
-		 r_w = 1; sel = 0; in = 1;
         #10;
 		
 		// Test case 9: read result, out is 1

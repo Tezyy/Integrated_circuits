@@ -1,17 +1,17 @@
-Active-HDL 15.0.261.9132 2024-11-20 14:08:18
+Active-HDL 15.0.261.9132 2024-11-20 11:33:20
 
 Elaboration top modules:
-Verilog Module                Testbench_memory_unit
+Verilog Module                Testbench_FSM
 
 
 ------------------------------------------------------------------------------------------------------
 Verilog Module          | Library            | Info | Compiler Version          | Compilation Options
 ------------------------------------------------------------------------------------------------------
-Testbench_memory_unit   | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-Memory_unit             | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-address_decoder         | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-Wordcell                | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-Bitcell_NAND            | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+Testbench_FSM           | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+FSM                     | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+comb_Logic              | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+memory_elements         | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+d_flip_flop             | bitcell_nand_latch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 ------------------------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------------------------------
@@ -19,9 +19,3 @@ Library                 | Comment
 ------------------------------------------------------------------------------------------------------
 bitcell_nand_latch      | None
 ------------------------------------------------------------------------------------------------------
-
-
-Simulation Options: asim -initregs 0 -O5 +access +w_nets +ml +inv +w_nets +accb +accr +access +r +m+Testbench_memory_unit Testbench_memory_unit
-
-
-The performance of simulation is reduced. Version Student Edition

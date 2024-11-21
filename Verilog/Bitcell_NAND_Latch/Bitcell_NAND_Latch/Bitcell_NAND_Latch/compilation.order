@@ -8,5 +8,3 @@
 .\src\Testbench_memory_unit.v
 .\src\FSM.v
 .\src\Testbench_FSM.v
-.\src\SRAM_with_FSM.v
-.\src\Testbench_SRAM_with_FSM.v
